@@ -5,19 +5,14 @@ import { images } from '../../../assets/images'
 import { moderateScale, verticalScale } from 'react-native-size-matters'
 import { Spacer } from '../../../components/Spacer'
 import BodyItem from './Molecules/BodyItem'
+import { Poppins } from '../../../utils/Fonts'
 
 const LoginScreen = () => {
   return (
     <View style={commonStyles.IosPadding}>
       <PH10>
-        <Spacer height={10}/>
-        <View style={{width:moderateScale(130),height:verticalScale(50),alignSelf:"center",borderRadius:10,overflow:"hidden"}}>
-          <Image source={images.appIcon}
-          style={commonStyles.img}/>
-        </View>
-        <Spacer height={25}/>
-
-        <BodyItem/>
+        <Text style={{fontFamily:Poppins.bold}}>fvfjvfjb</Text>
+        
 
 
 

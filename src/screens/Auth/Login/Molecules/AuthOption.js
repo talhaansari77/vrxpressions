@@ -8,49 +8,10 @@ import {Spacer} from '../../../../components/Spacer';
 import {icons} from '../../../../assets/icons';
 
 
-const AuthDate=[
-    {id:1,img:icons.google},
-    {id:2,img:icons.facebook},
-    {id:3,img:icons.linkend},
-
-]
-
 const AuthOption = () => {
   return (
     <View>
-      <View style={styles.OrContainer}>
-        <View style={styles.lineSeprator}></View>
-        <CustomText
-          label="OR"
-          fontFamily={Montserrat.SemiBold}
-          fontSize={15}
-          marginLeft={10}
-          marginRight={10}
-        />
-        <View style={styles.lineSeprator}></View>
-      </View>
-      <Spacer height={20} />
-      <View
-        style={{
-          flexDirection: 'row',
-          alignItems: 'center',
-          justifyContent: 'space-around',
-        }}>
-            {
-                AuthDate.map(item=>{
-                    return(
-                        <View style={styles.authContainer}>
-                        <Image
-                          style={{width: scale(18), height: verticalScale(18)}}
-                          source={item.img}
-                        />
-                      </View>
-                    
-                    )
-                })
-            }
-       
-      </View>
+    
     </View>
   );
 };

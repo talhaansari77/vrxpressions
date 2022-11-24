@@ -25,14 +25,12 @@ const BodyItem = () => {
       <CustomTextInput
         placeholder={'User Name'}
         placeholderTextColor={colors.black}
-        leftIcon={icons.userName}
         width={'87%'}
       />
       <Spacer height={15} />
       <CustomTextInput
         placeholder={'Card number'}
         placeholderTextColor={colors.black}
-        leftIcon={icons.card}
         width={'87%'}
         iconWidth={scale(15)}
         iconHeight={verticalScale(15)}

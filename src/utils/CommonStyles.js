@@ -51,7 +51,6 @@ import { colors } from './Colors';
     IosPadding:{
       flex: 1,paddingTop:Platform.OS=="ios"?verticalScale(40):5,
       paddingHorizontal:moderateScale(15),
-      backgroundColor:colors.white
     }
   });
 

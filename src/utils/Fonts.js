@@ -11,16 +11,10 @@ export const Montserrat = {
   BlackBold: 'Montserrat-Black',
   BlackItalicBold: 'Montserrat-BlackItalic',
 };
-export const Roboto = {
-  Thin100: 'Roboto-Thin',
-  Italic100: 'Robotot-ThinItalic',
-  Light200: 'Roboto-Light',
-  italic200: 'Roboto-LightItalic',
-  Regular300: 'Roboto-Regular',
-  Italic300: 'Roboto-Italic',
-  SemiBold: 'Roboto-Medium',
-  italic400: 'Roboto-MediumItalic',
-  Italic500: 'Roboto-BoldItalic',
-  BlackBold: 'Roboto-Black',
-  Italic700: 'Roboto-BlackItalic',
+export const Poppins = {
+  bold: 'Poppins-Bold',
+  light: 'Poppins-Light',
+  regular: 'Poppins-Regular',
+  semiBold: 'Poppins-SemiBold',
+ 
 };
