@@ -5,3 +5,11 @@ export const Poppins = {
   semiBold: 'Poppins-SemiBold',
  
 }; 
+
+export const Roboto = {
+  bold: 'Roboto-Bold',
+  light: 'Roboto-Light',
+  regular: 'Roboto-Regular',
+  semiBold: 'Roboto-Medium',
+ 
+}; 

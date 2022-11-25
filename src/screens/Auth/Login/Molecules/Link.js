@@ -11,7 +11,9 @@ const Link = ({txt1, txt2, onPress}) => (
         alignItems: 'center',
         justifyContent: 'center',
       }}>
-      <CustomText label={txt1} />
+      <CustomText label={txt1} 
+      fontSize={12}
+      />
       <TouchableOpacity activeOpacity={0.6} onPress={onPress}>
         <CustomText
           label={txt2}

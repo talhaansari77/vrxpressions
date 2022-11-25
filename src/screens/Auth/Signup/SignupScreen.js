@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableOpacity, ScrollView} from 'react-native';
 import React from 'react';
 import commonStyles, {PH10} from '../../../utils/CommonStyles';
 import {images} from '../../../assets/images';
@@ -13,16 +13,17 @@ import CustomButton from '../../../components/CustomButton';
 import SocialButton from '../Login/Molecules/SocialButton';
 import InputField from '../Login/Molecules/InputField';
 import Link from '../Login/Molecules/Link';
+import PrecentageSpacer from '../../../components/PrecentageSpacer';
 
 const SignupScreen = ({navigation}) => {
   
   return (
-    <View style={commonStyles.IosPadding}>
+    <ScrollView style={commonStyles.IosPadding}>
       {/* <PH10> */}
 
       <Image
         source={images.appIcon}
-        style={{width: '100%', height: 200}}
+        style={{width: '100%', height:verticalScale(150)}}
         resizeMode={'contain'}
       />
 
@@ -37,7 +38,7 @@ const SignupScreen = ({navigation}) => {
       <SocialButton label={'Login With GOOGLE'} icon={images.googleIcon} />
       <Spacer height={20} />
       <SocialButton label={'Login With facebook'} icon={images.fbIcon} />
-      <Spacer height={60} />
+      <PrecentageSpacer height={"8%"}/>
       <InputField placeholder={'Email'} />
       <Spacer height={20} />
       <InputField placeholder={'Password'} />
@@ -53,12 +54,12 @@ const SignupScreen = ({navigation}) => {
         height={verticalScale(35)}
         alignSelf={'center'}
       />
-      <Spacer height={20} />
+      <Spacer height={15} />
 
       <Link txt1={'Don’t have an account?'} txt2={'Login'} onPress={()=>navigation.navigate('LoginScreen')}/>
 
       {/* </PH10> */}
-    </View>
+    </ScrollView>
   );
 };
 

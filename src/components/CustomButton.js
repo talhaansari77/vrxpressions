@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, Text, StyleSheet, View, ActivityIndicator } from 'react-native';
+import { TouchableOpacity, Text, StyleSheet, View, ActivityIndicator,Platform } from 'react-native';
 // import { Ionicons } from "@expo/vector-icons";
 import { ScaledSheet, verticalScale, scale, moderateScale } from 'react-native-size-matters';
 
@@ -42,7 +42,15 @@ function CustomButton({
           marginTop,
           marginBottom:marginBottom,
           marginHorizontal:marginHorizontal,
-          alignSelf:alignSelf
+          alignSelf:alignSelf,
+          shadowColor: Platform.OS == 'ios' ? '#212529' : colors.black,
+          shadowRadius: 8,
+          elevation: 5,
+          alignItems: 'center',
+          shadowOpacity: 0.4,
+          justifyContent: 'center',
+      
+          shadowOffset: {width: 1, height: 2},
           
         },
       ]}

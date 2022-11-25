@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableOpacity, ScrollView} from 'react-native';
 import React from 'react';
 import commonStyles, {PH10} from '../../../utils/CommonStyles';
 import {images} from '../../../assets/images';
@@ -12,10 +12,11 @@ import CustomButton from '../../../components/CustomButton';
 import SocialButton from './Molecules/SocialButton';
 import InputField from './Molecules/InputField';
 import Link from './Molecules/Link';
+import PrecentageSpacer from '../../../components/PrecentageSpacer';
 
 const LoginScreen = ({navigation}) => {
   return (
-    <View style={commonStyles.IosPadding}>
+    <ScrollView style={commonStyles.IosPadding}>
       {/* <PH10> */}
 
       <Image
@@ -30,7 +31,8 @@ const LoginScreen = ({navigation}) => {
         fontSize={40}
         label={'Login'}
       />
-      <Spacer height={70} />
+      {/* <Spacer height={70} /> */}
+      <PrecentageSpacer height={"8%"}/>
 
       <SocialButton label={'Login With GOOGLE'} icon={images.googleIcon} />
       <Spacer height={20} />
@@ -40,7 +42,9 @@ const LoginScreen = ({navigation}) => {
       <Spacer height={20} />
       <InputField placeholder={'Password'} />
       <Spacer height={20} />
-      <CustomText label={'Forgotten Password'} marginLeft={20} />
+      <CustomText label={'Forgotten Password'}
+      fontSize={11}
+       marginLeft={20} />
       <Spacer height={20} />
       <CustomButton
         title={'Login'}
@@ -50,12 +54,12 @@ const LoginScreen = ({navigation}) => {
         height={verticalScale(35)}
         alignSelf={'center'}
       />
-      <Spacer height={20} />
+      <Spacer height={10} />
 
-      <Link txt1={'Don’t have an account?'} txt2={'Sign Up'} onPress={()=>navigation.navigate('SignupScreen')} />
+      <Link txt1={'Already have an account?'} txt2={'Sign Up'} onPress={()=>navigation.navigate('SignupScreen')} />
 
       {/* </PH10> */}
-    </View>
+    </ScrollView>
   );
 };
 

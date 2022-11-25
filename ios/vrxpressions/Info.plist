@@ -57,6 +57,11 @@
 		<string>Poppins-Light.ttf</string>
 		<string>Poppins-Regular.ttf</string>
 		<string>Poppins-SemiBold.ttf</string>
+		<string>Roboto-Bold.ttf</string>
+		<string>Roboto-Light.ttf</string>
+		<string>Roboto-Regular.ttf</string>
+		<string>Roboto-Medium.ttf</string>
+		
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
