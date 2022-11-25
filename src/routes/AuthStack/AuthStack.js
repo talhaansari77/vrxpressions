@@ -1,6 +1,7 @@
 import {View, Text} from 'react-native';
 import React, {useEffect} from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
+import Signup from '../../screens/Auth/Signup';
 import LoginScreen from '../../screens/Auth/Login/LoginScreen';
 
 const AuthStack = ({navigation}) => {
@@ -10,6 +11,7 @@ const AuthStack = ({navigation}) => {
       screenOptions={{headerShown: false}}
       // initialRouteName={"SecurityWallet"}
     >
+      <Stack.Screen name="SignupScreen" component={Signup} />
       <Stack.Screen name="LoginScreen" component={LoginScreen} />
   
 
