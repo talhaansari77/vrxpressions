@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const PrecentageSpacer = ({width,height}) => {
+const PercentageSpacer = ({width,height}) => {
   return (
     <View
     style={{
@@ -13,6 +13,6 @@ const PrecentageSpacer = ({width,height}) => {
   )
 }
 
-export default PrecentageSpacer
+export default PercentageSpacer
 
 const styles = StyleSheet.create({})
