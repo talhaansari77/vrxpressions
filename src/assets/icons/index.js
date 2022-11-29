@@ -3,9 +3,6 @@ export const icons={
     card:require("../icons/card.png"),
     google:require("../icons/google.png"),
     facebook:require("../icons/facebook.png"),
-    linkend:require("../icons/linkend.png")
-
-
-
-
+    linkend:require("../icons/linkend.png"),
+    rightArrow:require("../icons/rightArrow.png"),
 }
