@@ -1,18 +1,17 @@
-import {StyleSheet, Text, View, Image, TouchableOpacity, ScrollView} from 'react-native';
+import {StyleSheet, Image, ScrollView} from 'react-native';
 import React from 'react';
-import commonStyles, {PH10} from '../../../utils/CommonStyles';
+import commonStyles from '../../../utils/CommonStyles';
 import {images} from '../../../assets/images';
-import {moderateScale, scale, verticalScale} from 'react-native-size-matters';
+import {verticalScale} from 'react-native-size-matters';
 import {Spacer} from '../../../components/Spacer';
 import {Poppins} from '../../../utils/Fonts';
 import CustomText from '../../../components/CustomText';
 import {colors} from '../../../utils/Colors';
-import {TextInput} from 'react-native-gesture-handler';
 import CustomButton from '../../../components/CustomButton';
 import SocialButton from './Molecules/SocialButton';
 import InputField from './Molecules/InputField';
 import Link from './Molecules/Link';
-import PrecentageSpacer from '../../../components/PrecentageSpacer';
+import PercentageSpacer from '../../../components/PercentageSpacer';
 
 const LoginScreen = ({navigation}) => {
   return (
@@ -32,7 +31,7 @@ const LoginScreen = ({navigation}) => {
         label={'Login'}
       />
       {/* <Spacer height={70} /> */}
-      <PrecentageSpacer height={"8%"}/>
+      <PercentageSpacer height={'8%'} />
 
       <SocialButton label={'Login With GOOGLE'} icon={images.googleIcon} />
       <Spacer height={20} />
@@ -42,9 +41,7 @@ const LoginScreen = ({navigation}) => {
       <Spacer height={20} />
       <InputField placeholder={'Password'} />
       <Spacer height={20} />
-      <CustomText label={'Forgotten Password'}
-      fontSize={11}
-       marginLeft={20} />
+      <CustomText label={'Forgotten Password'} fontSize={11} marginLeft={20} />
       <Spacer height={20} />
       <CustomButton
         title={'Login'}
@@ -56,7 +53,11 @@ const LoginScreen = ({navigation}) => {
       />
       <Spacer height={10} />
 
-      <Link txt1={'Already have an account?'} txt2={'Sign Up'} onPress={()=>navigation.navigate('SignupScreen')} />
+      <Link
+        txt1={'Already have an account?'}
+        txt2={'Sign Up'}
+        onPress={() => navigation.navigate('SignupScreen')}
+      />
 
       {/* </PH10> */}
     </ScrollView>
