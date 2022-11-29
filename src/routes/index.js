@@ -4,6 +4,7 @@ import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import AuthStack from './AuthStack/AuthStack';
 // import MainStack from './MainStack/MainStack';
 import {StatusBar} from 'react-native';
+import MainStack from './MainStack/MainStack';
 
 const RootNavigator = () => {
 
@@ -20,9 +21,10 @@ const RootNavigator = () => {
   return (
     <NavigationContainer theme={MyTheme} >
       <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Screen name="MainStack" component={MainStack} />
+
       <Stack.Screen name="AuthStack" component={AuthStack} />
 
-        {/* <Stack.Screen name="AuthStack" component={AuthStack} /> */}
       </Stack.Navigator>
       <StatusBar barStyle={'dark-content'} />
     </NavigationContainer>

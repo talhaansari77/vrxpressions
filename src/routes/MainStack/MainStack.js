@@ -1,23 +1,29 @@
-// import {View, Text, Image, Platform} from 'react-native';
-// import {createStackNavigator} from '@react-navigation/stack';
-// import SignOutScreen from '../../screens/Main/SignOut/SignOutScreen';
+import {View, Text, Image, Platform} from 'react-native';
+import {createStackNavigator} from '@react-navigation/stack';
+import ChatScreen from '../../screens/Main/Chat/ChatScreen';
+import AudioCallScreen from '../../screens/Main/Chat/AudioCall/AudioCallScreen';
+import VideoCallScreen from '../../screens/Main/Chat/VideoCall/VideoCallScreen';
 
 
-// const MainStack = () => {
+const MainStack = () => {
 
-//   const Stack = createStackNavigator();
-//   return (
-//     <Stack.Navigator
-//       screenOptions={{headerShown: false}}
-//       initialRouteName={"Signout"}
-//     >
-//       {/* <Stack.Screen name="AddDesign" component={AddDesignScreen} /> */}
-//       {/* <Stack.Screen name="Signout" component={SignOutScreen} /> */}
+  const Stack = createStackNavigator();
+  return (
+    <Stack.Navigator
+      screenOptions={{headerShown: false}}
+      initialRouteName={"Signout"}
+    >
+      <Stack.Screen name="Chat" component={ChatScreen} />
+      <Stack.Screen name="AudioCall" component={AudioCallScreen} />
+      <Stack.Screen name="VideoCall" component={VideoCallScreen} />
 
 
-//     </Stack.Navigator>
-//   );
+      {/* <Stack.Screen name="Signout" component={SignOutScreen} /> */}
+
+
+    </Stack.Navigator>
+  );
  
-// };
+};
 
-// export default MainStack;
+export default MainStack;
