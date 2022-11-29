@@ -8,7 +8,17 @@ import {Poppins} from '../../../../utils/Fonts';
 import SelectorBadge from './SelectorBadge';
 import CustomText from '../../../../components/CustomText';
 
-const PrimaryCard = ({fontSize, badge}) => {
+const PrimaryCard = ({fontSize, badge, pHeight, pWidth}) => {
+  const cardContainerStyle = {
+    height: pHeight||"100%",
+    width: pWidth||"100%",
+    alignSelf: 'center',
+    shadowColor: colors.black,
+    shadowOffset: {width: 0, height: 1},
+    shadowOpacity: 0.2,
+    shadowRadius: 5,
+    elevation: 4,
+};
   const CardImage = () => (
     <Image
       source={images.smallHappinessStanding}
@@ -43,16 +53,7 @@ const PrimaryCard = ({fontSize, badge}) => {
 
 export default PrimaryCard;
 
-const cardContainerStyle = {
-    height: '45%',
-    width: '80%',
-    alignSelf: 'center',
-    shadowColor: colors.black,
-    shadowOffset: {width: 0, height: 1},
-    shadowOpacity: 0.2,
-    shadowRadius: 5,
-    elevation: 4,
-};
+
 const cardStyle = {
   height: '100%',
   width: '100%',
