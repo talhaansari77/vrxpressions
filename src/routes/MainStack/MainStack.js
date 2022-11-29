@@ -1,6 +1,5 @@
 import {View, Text, Image, Platform} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
-<<<<<<< HEAD
 import ProfileScreen from '../../screens/Main/Profile/ProfileScreen';
 import ProfileSettingScreen from '../../screens/Main/ProfileSetting/ProfileSettingScreen';
 import AccountSetting from '../../screens/Main/AccountSetting.js/AccountSetting';
@@ -12,30 +11,19 @@ import PrivacyPolicy from '../../screens/Main/Documentation/DocumentationDetail/
 import Disclaimer from '../../screens/Main/Documentation/DocumentationDetail/Disclaimer/Disclaimer';
 import NotificationScreen from '../../screens/Main/Notification/NotificationScreen';
 // import SignOutScreen from '../../screens/Main/SignOut/SignOutScreen';
-=======
+
 import SummaryScreen from '../../screens/Main/Summary/SummaryScreen';
+import MusicPlayerScreen from '../../screens/Main/MusicPlayer/MusicPlayerScreen';
+import Testing from '../../screens/Main/Testing/Testing';
 // import Summary from '../../screens/Auth/Login copy';
->>>>>>> ffb32f89a7a81c20cf959ac997a28e3fef5596a1
 
-const MainStack = () => {
-  const Stack = createStackNavigator();
-  return (
-    <Stack.Navigator
-      screenOptions={{headerShown: false}}
-      initialRouteName={'Signout'}>
-      <Stack.Screen name="SummaryScreen" component={SummaryScreen} />
-    </Stack.Navigator>
-  );
-};
-
-<<<<<<< HEAD
 const MainStack = () => {
 
   const Stack = createStackNavigator();
   return (
     <Stack.Navigator
       screenOptions={{headerShown: false}}
-      initialRouteName={"NotificationScreen"}
+      initialRouteName={"MusicPlayerScreen"}
     >
       {/* <Stack.Screen name="AddDesign" component={AddDesignScreen} /> */}
       {/* <Stack.Screen name="Signout" component={SignOutScreen} /> */}
@@ -49,6 +37,8 @@ const MainStack = () => {
       <Stack.Screen name="PrivacyPolicy" component={PrivacyPolicy} />
       <Stack.Screen name="Disclaimer" component={Disclaimer} />
       <Stack.Screen name="NotificationScreen" component={NotificationScreen} />
+      <Stack.Screen name="MusicPlayerScreen" component={MusicPlayerScreen} />
+      <Stack.Screen name="Testing" component={Testing} />
 
 
     </Stack.Navigator>
@@ -57,6 +47,5 @@ const MainStack = () => {
 };
 
 
-=======
->>>>>>> ffb32f89a7a81c20cf959ac997a28e3fef5596a1
+
 export default MainStack;

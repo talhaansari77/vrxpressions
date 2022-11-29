@@ -1,4 +1,4 @@
-import {View, Text, SafeAreaView, FlatList, ScrollView} from 'react-native';
+import {View, Text, SafeAreaView, FlatList, ScrollView, Platform} from 'react-native';
 import React from 'react';
 import CustomTitle from '../../../components/CustomTitle';
 import {Spacer} from '../../../components/Spacer';
@@ -88,10 +88,11 @@ const NotificationScreen = () => {
 
   return (
     <View>
-      <SafeAreaView>
+      {/* <SafeAreaView> */}
+      <Spacer height={Platform.OS==="ios"?40:5} />
         <CustomTitle title={'Notification'} />
         <Spacer height={30} />
-        <ScrollView>
+        {/* <ScrollView> */}
           <FlatList
             data={notificationArray}
             showsVerticalScrollIndicator={false}
@@ -126,8 +127,8 @@ const NotificationScreen = () => {
               );
             }}
           />
-        </ScrollView>
-      </SafeAreaView>
+        {/* </ScrollView> */}
+      {/* </SafeAreaView> */}
     </View>
   );
 };

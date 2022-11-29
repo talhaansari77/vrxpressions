@@ -7,7 +7,7 @@ import { colors } from '../utils/Colors'
 const CustomTitle = (props) => {
   return (
     <View>
-       <Spacer height={30} />
+       {/* <Spacer height={30} /> */}
       <View style={{width:"100%", paddingHorizontal:20}}>
         <CustomText
           label={props.title}

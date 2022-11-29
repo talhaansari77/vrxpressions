@@ -16,19 +16,12 @@ const RootNavigator = () => {
 
   const Stack = createStackNavigator();
   return (
-<<<<<<< HEAD
-    <NavigationContainer theme={MyTheme} >
-      <Stack.Navigator screenOptions={{headerShown: false}}>
-      <Stack.Screen name="MainStack" component={MainStack} />
-      <Stack.Screen name="AuthStack" component={AuthStack} />
 
-        {/* <Stack.Screen name="AuthStack" component={AuthStack} /> */}
-=======
     <NavigationContainer theme={MyTheme}>
       <Stack.Navigator initialRouteName='MainStack' screenOptions={{headerShown: false}}>
-        <Stack.Screen name="AuthStack" component={AuthStack} />
         <Stack.Screen name="MainStack" component={MainStack} />
->>>>>>> ffb32f89a7a81c20cf959ac997a28e3fef5596a1
+        <Stack.Screen name="AuthStack" component={AuthStack} />
+
       </Stack.Navigator>
       <StatusBar barStyle={'dark-content'} />
     </NavigationContainer>

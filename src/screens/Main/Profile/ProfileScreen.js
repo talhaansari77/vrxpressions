@@ -106,7 +106,7 @@ const ProfileScreen = () => {
             shadowOffset: {width: 0, height: 3},
             shadowOpacity: 0.4,
             shadowRadius: 5,
-            backgroundColor: '#000',
+            // backgroundColor: '#000',
             paddingBottom: 50,
           }}
         />
@@ -120,8 +120,8 @@ const ProfileScreen = () => {
           shadowOpacity={0.1}
           color={colors.black}
           borderRadius={40}
-          top={-100}
-          left={360}
+          alignSelf={"flex-end"}
+          bottom={80}
         />
 
         <Spacer height={50} />
