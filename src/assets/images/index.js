@@ -24,3 +24,4 @@ export const images = {
   playButton: require('../images/playButton.png'),
   
 };
+
