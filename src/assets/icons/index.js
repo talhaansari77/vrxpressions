@@ -6,8 +6,5 @@ export const icons={
     linkend:require("../icons/linkend.png"),
     Tick:require("../icons/Tick.png"),
     Crown:require("../icons/Crown.png"),
-
-
-
-
+    rightArrow:require("../icons/rightArrow.png"),
 }

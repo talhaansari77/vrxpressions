@@ -42,6 +42,8 @@ function CustomText(props) {
             textDecorationColor: props.textDecorationColor,
             // text-decoration-color: "red";
             textDecorationLine: props.textDecorationLine,
+            letterSpacing: props.letterSpacing,
+            lineHeight: props.lineHeight
           },
           props.textStyle,
         ]}

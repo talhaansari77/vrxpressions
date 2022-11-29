@@ -272,7 +272,7 @@ const SummaryScreen = () => {
         height={verticalScale(30)}
         alignSelf={'center'}
         shadowColor={colors.white}
-        shadowOpacity={0.4}
+        shadowHeight={-5}
       />
     </View>
   );

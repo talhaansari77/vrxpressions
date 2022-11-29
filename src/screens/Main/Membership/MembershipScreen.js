@@ -100,6 +100,8 @@ const MembershipScreen = () => {
           width={200}
           height={50}
           shadowColor={colors.white}
+          shadowOpacity={0.8}
+          shadowHeight={-5}
         />
       </Center>
     </LinearGradient>

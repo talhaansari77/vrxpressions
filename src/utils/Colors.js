@@ -9,7 +9,10 @@ export const colors = {
     parrot:"#C3F2A6",
     white: '#FFFFFF',
     black: "black",
+    lightBlack:"#BFBACB",
     red: 'red',
+    grey:"#B7B7B7"
+
   };
   
   

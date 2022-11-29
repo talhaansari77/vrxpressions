@@ -3,6 +3,7 @@ export const images={
    appIcon: require("../images/AppIcon.png"),
    fbIcon: require("../images/fbIcon.png"),
    googleIcon: require("../images/googleIcon.png"),
+   ProfilePicture: require("../images/ProfilePicture.png"),
    getStarted: require("../images/getStarted.png"),
    smallHappinessStanding: require("../images/smallHappinessStanding.png"),
    dumbbell: require("../images/dumbbell.png"),
