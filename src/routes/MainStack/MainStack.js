@@ -2,7 +2,7 @@ import {View, Text, Image, Platform} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 import SummaryScreen from '../../screens/Main/Summary/SummaryScreen';
 import Activities from '../../screens/Main/Activities';
-import MembershipScreen from '../../screens/Main/Membership/MembershipScreen';
+// import MembershipScreen from '../../screens/Main/Membership/MembershipScreen';
 import ProfileScreen from '../../screens/Main/Profile/ProfileScreen';
 import ProfileSettingScreen from '../../screens/Main/ProfileSetting/ProfileSettingScreen';
 import AccountSetting from '../../screens/Main/AccountSetting.js/AccountSetting';
@@ -24,7 +24,6 @@ const MainStack = () => {
     >
       <Stack.Screen name="SummaryScreen" component={SummaryScreen} />
       <Stack.Screen name="ActivitiesScreen" component={Activities} />
-      <Stack.Screen name="MembershipScreen" component={MembershipScreen} />
       <Stack.Screen name="MemberShipMenu" component={MemberShipMenu} />
 
 
