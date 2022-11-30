@@ -4,12 +4,12 @@ import CustomText from '../../../../../components/CustomText';
 import {colors} from '../../../../../utils/Colors';
 import {Poppins} from '../../../../../utils/Fonts';
 import {Spacer} from '../../../../../components/Spacer';
-import PrecentageSpacer from '../../../../../components/PrecentageSpacer';
 import CustomButton from '../../../../../components/CustomButton';
 import {scale, ScaledSheet, verticalScale} from 'react-native-size-matters';
 import {icons} from '../../../../../assets/icons';
 import commonStyles from '../../../../../utils/CommonStyles';
 import { images } from '../../../../../assets/images';
+import PercentageSpacer from '../../../../../components/PercentageSpacer';
 
 const CallContainer = ({...props}) => {
   return (
@@ -65,6 +65,7 @@ const CallContainer = ({...props}) => {
       
 
           </View>
+          {/* <Text>jdjb</Text> */}
       
 
         <CustomButton
@@ -72,6 +73,7 @@ const CallContainer = ({...props}) => {
           fontFamily={Poppins.bold}
           backgroundColor={colors.secondary}
           width={'45%'}
+        
           height={verticalScale(35)}
           borderRadius={10}
           alignSelf={'center'}

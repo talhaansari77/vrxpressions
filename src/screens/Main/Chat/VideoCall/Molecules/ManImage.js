@@ -10,22 +10,22 @@ import React from 'react';
 import {BackgroundImage} from 'react-native-elements/dist/config';
 import commonStyles from '../../../../../utils/CommonStyles';
 import {images} from '../../../../../assets/images';
-import PrecentageSpacer from '../../../../../components/PrecentageSpacer';
 import {verticalScale} from 'react-native-size-matters';
 import CallContainer from '../../AudioCall/Molecules/CallContainer';
 import {icons} from '../../../../../assets/icons';
 import {colors} from '../../../../../utils/Colors';
+import PercentageSpacer from '../../../../../components/PercentageSpacer';
 
 const ManImage = () => {
   return (
     <View style={styles.mainContainer}>
       <ImageBackground source={images.manImg} style={commonStyles.img}>
-        <PrecentageSpacer height={Platform.OS == 'ios' ? '5%' : 0} />
+        <PercentageSpacer height={Platform.OS == 'ios' ? '5%' : 0} />
 
         <View style={styles.imgContainer}>
           <Image source={images.womenImg} style={commonStyles.img} />
         </View>
-        <PrecentageSpacer height={"43%"}/>
+        <PercentageSpacer height={"43%"}/>
         <CallContainer
           color={colors.white}
           cancel

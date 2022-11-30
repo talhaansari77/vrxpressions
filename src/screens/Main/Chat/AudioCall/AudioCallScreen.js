@@ -1,15 +1,15 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import MainImage from './Molecules/MainImage'
-import PrecentageSpacer from '../../../../components/PrecentageSpacer'
 import CallContainer from './Molecules/CallContainer'
 import { icons } from '../../../../assets/icons'
 import { colors } from '../../../../utils/Colors'
+import PercentageSpacer from '../../../../components/PercentageSpacer'
 
 const AudioCallScreen = () => {
   return (
     <View>
-      <PrecentageSpacer height={"10%"}/>
+      <PercentageSpacer height={"10%"}/>
 
       <MainImage/>
 

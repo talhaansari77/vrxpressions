@@ -61,6 +61,9 @@ import { colors } from './Colors';
   export const PH10 = styled(View, {
     paddingHorizontal: scale(10),
   });
+  export const PH5 = styled(View, {
+    paddingHorizontal: scale(5),
+  });
   export const PH20 = styled(View, {
     paddingHorizontal: scale(20),
   });

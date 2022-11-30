@@ -10,6 +10,7 @@ const Link = ({txt1, txt2, onPress}) => (
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
+        flexWrap:'wrap'
       }}>
       <CustomText label={txt1} 
       fontSize={12}

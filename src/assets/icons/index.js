@@ -10,6 +10,9 @@ export const icons={
     send:require("../icons/send.png"),
     voice:require("../icons/voice.png"),
     videocancel:require("../icons/videocancel.png"),
+    start:require("../icons/start.png"),
+    stop:require("../icons/stop.png"),
+    pause:require("../icons/pause.png"),
 
 
 
@@ -19,4 +22,6 @@ export const icons={
 
 
 
+
+    rightArrow:require("../icons/rightArrow.png"),
 }
