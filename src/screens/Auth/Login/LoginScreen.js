@@ -41,13 +41,19 @@ const LoginScreen = ({navigation}) => {
       <Spacer height={20} />
       <InputField placeholder={'Password'} />
       <Spacer height={20} />
-      <CustomText label={'Forgotten Password'} fontSize={11} marginLeft={20} />
+      <CustomText 
+        onPress={()=>{
+          navigation.navigate("ResetPassword")
+
+        }}
+      label={'Forgotten Password'} fontSize={11} marginLeft={20} />
       <Spacer height={20} />
       <CustomButton
         title={'Login'}
         fontFamily={Poppins.bold}
         backgroundColor={colors.secondary}
         width={'50%'}
+      
         height={verticalScale(35)}
         alignSelf={'center'}
       />

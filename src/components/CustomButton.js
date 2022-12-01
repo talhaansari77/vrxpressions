@@ -42,7 +42,8 @@ function CustomButton({
   shadowOpacity,
   shadowHeight,
   top,
-  left
+  left,
+  bottom
 }) {
   return (
     <TouchableOpacity
@@ -56,7 +57,7 @@ function CustomButton({
           borderRadius: borderRadius || 30,
           alignItems: alignItems || 'center',
           justifyContent: justifyContent || 'center',
-          marginTop,
+          marginTop:marginTop,
           marginBottom: marginBottom,
           marginHorizontal: marginHorizontal,
           alignSelf: alignSelf,
@@ -71,11 +72,12 @@ function CustomButton({
           shadowRadius: 4,
           elevation: 5,
           alignItems: 'center',
-          shadowOpacity: shadowOpacity||0.4,
+          shadowOpacity: shadowOpacity ||0.4,
           justifyContent: 'center',
           // top: top || -50,
           // left: left || 320,
           shadowOffset: {width: 1, height: shadowHeight||2},
+
           
         },
       ]}

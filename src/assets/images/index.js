@@ -24,6 +24,17 @@ export const images={
    Sleep: require("../images/Sleep.png"),
    balance: require("../images/balance.png"),
    ArmHold: require("../images/ArmHold.png"),
+   musicImage: require('../images/musicImage.png'),
+   loop1: require('../images/loop1.png'),
+   loop2: require('../images/loop2.png'),
+   backword: require('../images/backword.png'),
+   forward: require('../images/forward.png'),
+   pauseButton: require('../images/pauseButton.png'),
+   playButton: require('../images/playButton.png'),
+   man: require('../images/man.png'),
+   audioman: require('../images/audioman.png'),
+   manImg: require('../images/manImg.png'),
+   womenImg: require('../images/womenImg.png'),
 
 
 

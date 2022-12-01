@@ -279,6 +279,8 @@ const SummaryScreen = () => {
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={commonStyles.IosPadding}>
+      <Spacer height={20} />
+
         <CustomText
           fontFamily={Poppins.bold}
           color={colors.black}

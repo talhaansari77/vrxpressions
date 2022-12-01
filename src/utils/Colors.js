@@ -11,8 +11,11 @@ export const colors = {
     black: "black",
     lightBlack:"#BFBACB",
     red: 'red',
-    grey:"#B7B7B7"
-
+    grey:"#B7B7B7",
+    lightGray:"#8E8E93",
+    black1:"#000000",
+    darkGray:"#343a40",
+    tabColor:"#DFD2FD",
   };
   
   

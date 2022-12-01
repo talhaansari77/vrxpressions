@@ -4,7 +4,7 @@ import SettingScreenHeader from './Molecules/SettingScreenHeader';
 import {colors} from '../../../utils/Colors';
 import SettingScreenBody from './Molecules/SettingScreenBody';
 
-const ProfileSettingScreen = () => {
+const ProfileSettingScreen = ({navigation}) => {
   return (
     <View
       style={{
@@ -13,7 +13,7 @@ const ProfileSettingScreen = () => {
       }}>
       <SafeAreaView>
         <SettingScreenHeader />
-        <SettingScreenBody />
+        <SettingScreenBody navigation={navigation} />
       </SafeAreaView>
     </View>
   );
