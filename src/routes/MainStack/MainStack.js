@@ -19,7 +19,7 @@ const MainStack = () => {
   return (
     <Stack.Navigator
       screenOptions={{headerShown: false}}
-      // initialRouteName={'MemberShipMenu'}
+      initialRouteName={'ActivitiesScreen'}
     >
       <Stack.Screen name="SummaryScreen" component={SummaryScreen} />
       <Stack.Screen name="ActivitiesScreen" component={Activities} />

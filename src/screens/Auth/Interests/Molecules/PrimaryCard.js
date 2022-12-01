@@ -1,5 +1,5 @@
 import {View, Text, Image, TouchableOpacity} from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import {colors} from '../../../../utils/Colors';
 import {moderateScale} from 'react-native-size-matters';
 import LinearGradient from 'react-native-linear-gradient';
@@ -8,51 +8,69 @@ import {Poppins} from '../../../../utils/Fonts';
 import SelectorBadge from './SelectorBadge';
 import CustomText from '../../../../components/CustomText';
 
-const PrimaryCard = ({fontSize, badge, pHeight, pWidth}) => {
+const PrimaryCard = ({
+  fontSize,
+  badge,
+  pHeight,
+  pWidth,
+  setVisible,
+  btnLabel,
+  image,
+}) => {
+  const [showBadge, setShowBadge] = useState(false);
   const cardContainerStyle = {
-    height: pHeight||"100%",
-    width: pWidth||"100%",
+    height: pHeight || '100%',
+    width: pWidth || '100%',
     alignSelf: 'center',
     shadowColor: colors.black,
     shadowOffset: {width: 0, height: 1},
     shadowOpacity: 0.2,
     shadowRadius: 5,
     elevation: 4,
-};
-  const CardImage = () => (
+  };
+  const CardImage = ({image}) => (
     <Image
-      source={images.smallHappinessStanding}
+      source={image || images.smallHappinessStanding}
       style={cardImageStyle}
       resizeMode={'contain'}
     />
   );
-  const CardButton = () => (
-    <TouchableOpacity activeOpacity={0.8} style={cardBtnStyle}>
-      <SelectorBadge badge={badge} />
+  const CardButton = ({setVisible, btnLabel, showBadge}) => (
+    <TouchableOpacity
+      activeOpacity={0.8}
+      onPress={() => {
+        setVisible ? setVisible(true) : '';
+        setShowBadge(true);
+      }}
+      style={cardBtnStyle}>
+      {showBadge ? <SelectorBadge badge={badge} /> : <></>}
+
       <CustomText
         fontFamily={Poppins.bold}
         color={colors.white}
         fontSize={fontSize}
-        label={'Improve Focus'}
+        label={btnLabel || 'Exercise'}
       />
     </TouchableOpacity>
   );
   // Main Function
   return (
-    <View
-      style={cardContainerStyle}>
+    <View style={cardContainerStyle}>
       <LinearGradient
         colors={['#8E97FD80', '#bfc5fc', '#FCDDEC80', '#FFFFFF']}
         style={cardStyle}>
-        <CardImage />
+        <CardImage image={image} />
       </LinearGradient>
-      <CardButton />
+      <CardButton
+        setVisible={setVisible}
+        btnLabel={btnLabel}
+        showBadge={showBadge}
+      />
     </View>
   );
 };
 
 export default PrimaryCard;
-
 
 const cardStyle = {
   height: '100%',
@@ -74,8 +92,8 @@ const cardBtnStyle = {
   justifyContent: 'center',
   top: '-10%',
   shadowColor: colors.black,
-  shadowOffset: {width: 0, height: 1},
-  shadowOpacity: 0.6,
+  shadowOffset: {width: 0, height: 5},
+  shadowOpacity: 0.4,
   shadowRadius: 4,
   elevation: 5,
 };
