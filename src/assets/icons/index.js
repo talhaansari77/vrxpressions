@@ -14,6 +14,13 @@ export const icons={
     stop:require("../icons/stop.png"),
     pause:require("../icons/pause.png"),
 
+     man:require("../icons/man.png"),
+    setting:require("../icons/setting.png"),
+    noti:require("../icons/noti.png"),
+    exercise:require("../icons/exercise.png"),
+    chat:require("../icons/chat.png"),
+    pause:require("../icons/pause.png"),
+    home:require("../icons/home.png"),
 
 
 
@@ -23,5 +30,11 @@ export const icons={
 
 
 
+
+
+
+
+    Tick:require("../icons/Tick.png"),
+    Crown:require("../icons/Crown.png"),
     rightArrow:require("../icons/rightArrow.png"),
 }

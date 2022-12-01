@@ -1,4 +1,11 @@
-import {StyleSheet, Image, ScrollView, TextInput, Text} from 'react-native';
+import {
+  StyleSheet,
+  Image,
+  ScrollView,
+  TextInput,
+  Text,
+  View,
+} from 'react-native';
 import React from 'react';
 import commonStyles, {PH10} from '../../../utils/CommonStyles';
 import {images} from '../../../assets/images';
@@ -13,7 +20,8 @@ import InputField from '../Login/Molecules/InputField';
 import Link from '../Login/Molecules/Link';
 import PercentageSpacer from '../../../components/PercentageSpacer';
 
-const OtpScreen = ({navigation}) => {
+const OtpScreen = ({navigation, route}) => {
+  console.log('Params');
   return (
     <ScrollView style={commonStyles.IosPadding}>
       {/* <PH10> */}
@@ -28,15 +36,22 @@ const OtpScreen = ({navigation}) => {
         fontFamily={Poppins.bold}
         color={colors.secondary}
         fontSize={40}
-        label={'OTP'}
+        label={route?.params ? 'Reset Password' : 'OTP'}
       />
-      <Spacer height={50} />
+      <Spacer height={route?.params ? '30' : '50'} />
       <PH10>
-        <Text style={{fontSize: 17}}>
+        <View style={{flexDirection: 'row', alignItems: 'center'}}></View>
+        <Text
+          style={{fontSize: verticalScale(13), fontFamily: Poppins.regular}}>
           Please enter the OTP sent to
-          <Text style={{color: colors.secondary, fontWeight: 'bold'}}>
+          <Text
+            style={{
+              color: colors.secondary,
+              fontWeight: 'bold',
+              fontFamily: Poppins.regular,
+            }}>
             {' '}
-            “xyz@gmail.com”
+            “xyz@gmail.com”.
           </Text>
         </Text>
       </PH10>
@@ -44,6 +59,7 @@ const OtpScreen = ({navigation}) => {
       <TextInput
         textAlign="center"
         placeholder="01245"
+        placeholderTextColor={colors.secondary}
         style={{
           // backgroundColor: 'red',
           height: verticalScale(100),
@@ -54,6 +70,7 @@ const OtpScreen = ({navigation}) => {
           borderBottomColor: colors.secondary,
           color: colors.secondary,
           borderBottomWidth: 3,
+          width: '90%',
           alignSelf: 'center',
         }}
         maxLength={5}
@@ -62,18 +79,25 @@ const OtpScreen = ({navigation}) => {
 
       <Spacer height={20} />
       <CustomButton
-        title={'Sign Up'}
+        title={route?.params ? 'Confirm' : 'Sign Up'}
         fontFamily={Poppins.bold}
         backgroundColor={colors.secondary}
         width={'50%'}
         height={verticalScale(35)}
         alignSelf={'center'}
+        onPress={() => {
+          if (route?.params) {
+            navigation.navigate('ConfirmReset');
+          } else {
+            navigation.navigate('GetStarted');
+          }
+        }}
       />
       <Spacer height={15} />
       <Link
         txt1={'Didn’t recieve OTP?'}
         txt2={'Resend'}
-        onPress={() => navigation.navigate('LoginScreen')}
+       
       />
 
       {/* </PH10> */}

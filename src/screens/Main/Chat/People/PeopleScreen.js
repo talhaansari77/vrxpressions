@@ -74,7 +74,7 @@ const PeopleScreen = ({navigation}) => {
   }
   return (
     <View style={commonStyles.IosContainer}>
-      <Spacer height={30} />
+      <Spacer height={20} />
       <CustomText
         fontFamily={Poppins.bold}
         color={colors.secondary}

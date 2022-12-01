@@ -45,7 +45,7 @@ const Interests = ({navigation}) => {
           height: '50%',
           width: '50%',
         }}> */}
-      <PrimaryCard fontSize={18} badge={1} />
+      <PrimaryCard fontSize={18} badge={1} pHeight={'45%'} pWidth={'80%'} />
       {/* </View> */}
       <Spacer height={100} />
 
@@ -55,6 +55,10 @@ const Interests = ({navigation}) => {
         backgroundColor={colors.secondary}
         width={'50%'}
         height={verticalScale(35)}
+        onPress={()=>{
+          navigation.navigate("MainStack")
+
+        }}
         alignSelf={'center'}
       />
     </>

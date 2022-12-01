@@ -271,12 +271,16 @@ const SummaryScreen = () => {
         width={'70%'}
         height={verticalScale(30)}
         alignSelf={'center'}
+        shadowColor={colors.white}
+        shadowHeight={-5}
       />
     </View>
   );
   return (
-    <ScrollView>
+    <ScrollView showsVerticalScrollIndicator={false}>
       <View style={commonStyles.IosPadding}>
+      <Spacer height={20} />
+
         <CustomText
           fontFamily={Poppins.bold}
           color={colors.black}

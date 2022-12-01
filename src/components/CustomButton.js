@@ -1,11 +1,23 @@
 import React from 'react';
-import { TouchableOpacity, Text, StyleSheet, View, ActivityIndicator,Platform } from 'react-native';
+import {
+  TouchableOpacity,
+  Text,
+  StyleSheet,
+  View,
+  ActivityIndicator,
+  Platform,
+} from 'react-native';
 // import { Ionicons } from "@expo/vector-icons";
-import { ScaledSheet, verticalScale, scale, moderateScale } from 'react-native-size-matters';
+import {
+  ScaledSheet,
+  verticalScale,
+  scale,
+  moderateScale,
+} from 'react-native-size-matters';
 
 // import { ActivityIndicator } from "react-native-paper";
-import { colors } from '../utils/Colors';
-import { Montserrat, Poppins } from '../utils/Fonts';
+import {colors} from '../utils/Colors';
+import {Montserrat, Poppins} from '../utils/Fonts';
 function CustomButton({
   loading,
   title,
@@ -26,9 +38,12 @@ function CustomButton({
   fontSize,
   marginHorizontal,
   alignSelf,
+  shadowColor,
   shadowOpacity,
+  shadowHeight,
   top,
-  left
+  left,
+  bottom
 }) {
   return (
     <TouchableOpacity
@@ -42,36 +57,43 @@ function CustomButton({
           borderRadius: borderRadius || 30,
           alignItems: alignItems || 'center',
           justifyContent: justifyContent || 'center',
-          marginTop,
-          marginBottom:marginBottom,
-          marginHorizontal:marginHorizontal,
-          alignSelf:alignSelf,
-          shadowColor: Platform.OS == 'ios' ? '#212529' : colors.black,
-          shadowRadius: 8,
+          marginTop:marginTop,
+          marginBottom: marginBottom,
+          marginHorizontal: marginHorizontal,
+          alignSelf: alignSelf,
+          shadowColor:
+            Platform.OS == 'ios'
+              ? shadowColor
+                ? shadowColor
+                : '#212529'
+              : shadowColor
+              ? shadowColor
+              : colors.black,
+          shadowRadius: 4,
           elevation: 5,
           alignItems: 'center',
-          shadowOpacity: shadowOpacity || 0.4,
+          shadowOpacity: shadowOpacity ||0.4,
           justifyContent: 'center',
-      
-          shadowOffset: {width: 1, height: 2},
+          // top: top || -50,
+          // left: left || 320,
+          shadowOffset: {width: 1, height: shadowHeight||2},
+
           
         },
       ]}
-      onPress={onPress}
-    >
+      onPress={onPress}>
       {loading ? (
         <ActivityIndicator color={colors.white} size={moderateScale(26)} />
       ) : (
-        <View style={{ flexDirection: 'row' }}>
+        <View style={{flexDirection: 'row'}}>
           <Text
             style={[
               {
                 color: color || colors.white,
-                fontSize: verticalScale(fontSize|| 14),
-                fontFamily: fontFamily || Poppins.bold
+                fontSize: verticalScale(fontSize || 14),
+                fontFamily: fontFamily || Poppins.bold,
               },
-            ]}
-          >
+            ]}>
             {title}
           </Text>
         </View>
