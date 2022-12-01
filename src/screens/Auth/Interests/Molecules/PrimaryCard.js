@@ -16,6 +16,8 @@ const PrimaryCard = ({
   setVisible,
   btnLabel,
   image,
+  imageWidth,
+  imageHeight,
 }) => {
   const [showBadge, setShowBadge] = useState(false);
   const cardContainerStyle = {
@@ -27,6 +29,11 @@ const PrimaryCard = ({
     shadowOpacity: 0.2,
     shadowRadius: 5,
     elevation: 4,
+  };
+  const cardImageStyle = {
+    width: imageWidth||'100%',
+    height: imageHeight || '70%',
+    marginBottom: '10%',
   };
   const CardImage = ({image}) => (
     <Image
@@ -97,8 +104,4 @@ const cardBtnStyle = {
   shadowRadius: 4,
   elevation: 5,
 };
-const cardImageStyle = {
-  width: '100%',
-  height: '70%',
-  marginBottom: '10%',
-};
+

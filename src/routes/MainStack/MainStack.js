@@ -49,7 +49,7 @@ const MainStack = () => {
           elevation: 10,
           shadowOpacity: 0.7,
           shadowOffset: {width: 1, height: 4},
-
+          zIndex: 1000,
           paddingHorizontal: scale(10),
           paddingTop: Platform.OS == 'ios' ? 20 : 0,
         },
@@ -66,17 +66,13 @@ const MainStack = () => {
             // );
           } else if (route.name === 'ActivitiesScreen') {
             iconName = icons.exercise;
-          }
-           else if (route.name === 'ChatStack') {
+          } else if (route.name === 'ChatStack') {
             iconName = icons.chat;
-          }
-          else if (route.name === 'ProfileScreen') {
+          } else if (route.name === 'ProfileScreen') {
             iconName = icons.man;
-          }
-          else if (route.name === 'NotificationScreen') {
+          } else if (route.name === 'NotificationScreen') {
             iconName = icons.noti;
-          }
-          else if (route.name === 'SettingStack') {
+          } else if (route.name === 'SettingStack') {
             iconName = icons.setting;
           }
 
@@ -93,29 +89,24 @@ const MainStack = () => {
           );
         },
       })}
-      activeColor="#f0edf6"
-      inactiveColor="#3e2465"
-      barStyle={{backgroundColor: '#694fad'}}
-      tabBarOptions={{
-        activeTintColor: colors.primary,
-        inactiveTintColor: '#000',
-        // activeBackgroundColor: '#fff',
-        showIcon: true,
-      }}
+      // activeColor="#f0edf6"
+      // inactiveColor="#3e2465"
+      // barStyle={{backgroundColor: '#694fad'}}
+      // tabBarOptions={{
+      //   activeTintColor: colors.primary,
+      //   inactiveTintColor: '#000',
+      //   // activeBackgroundColor: '#fff',
+      //   showIcon: true,
+      // }}
       initialRouteName="SummaryScreen">
       <Tab.Screen name="SummaryScreen" component={SummaryScreen} />
       <Tab.Screen name="ActivitiesScreen" component={Activities} />
-      
+
       <Tab.Screen name="ChatStack" component={ChatStack} />
       <Tab.Screen name="ProfileScreen" component={ProfileScreen} />
 
-      <Tab.Screen
-        name="NotificationScreen"
-        component={NotificationScreen}
-      />
-            <Tab.Screen name="SettingStack" component={SettingStack} />
-
-
+      <Tab.Screen name="NotificationScreen" component={NotificationScreen} />
+      <Tab.Screen name="SettingStack" component={SettingStack} />
 
       {/* <Tab.Screen name="Store" component={StoreScreen} /> */}
 

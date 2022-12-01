@@ -263,6 +263,8 @@ const Activities = () => {
               image={item.image}
               btnLabel={item.btnLabel}
               setVisible={setVisible}
+              imageWidth={'70%'}
+              imageHeight={'70%'}
             />
           </View>
         )}
