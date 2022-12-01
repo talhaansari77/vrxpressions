@@ -6,18 +6,20 @@ import {
   Image,
   ImageStore,
 } from 'react-native';
-import React, {useState} from 'react';
-import TrackPlayer, { useProgress } from 'react-native-track-player';
+import React, {useEffect, useState} from 'react';
+import TrackPlayer, {useProgress} from 'react-native-track-player';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import {colors} from '../../../../utils/Colors';
 import {images} from '../../../../assets/images';
 import {Spacer} from '../../../../components/Spacer';
 import CustomText from '../../../../components/CustomText';
-// import * as Progress from 'react-native-progress';
+import * as Progress from 'react-native-progress';
 
 const MusicBody = () => {
   const [playing, setPlaying] = useState(true);
   const [tracker, setTracker] = useState(true);
+  const progress = useProgress();
+
   const musicButton = [
     {
       id: 1,
@@ -27,7 +29,7 @@ const MusicBody = () => {
       id: 2,
       image: images.backword,
       press: () => {
-        TrackPlayer.forward();
+        TrackPlayer.forward;
       },
     },
     {
@@ -38,70 +40,66 @@ const MusicBody = () => {
         setPlaying(!playing);
         setTracker(!tracker);
       },
-      // hw: style={{height:80, width:80}}
     },
     {
       id: 4,
       image: images.forward,
-    //   press: () => {
-    //     TrackPlayer.getTrack(20);
-    //   },
+      press: () => {
+        progress.position  / parseInt(progress?.duration) + 1000
+      }
     },
     {
       id: 5,
       image: images.loop1,
     },
   ];
-  const progress = useProgress();
-//   const MyPlayerBar = () => {
-    
 
-//     return (
-//             // Note: formatTime and ProgressBar are just examples:
-//             <View>
-//                 <Text>{formatTime(progress.position)}</Text>
-//                 <View>
-//                     progress={progress.position}
-//                     buffered={progress.buffered}
-//                     </View>
-//             </View>
-//         );
+  // const useProgressin = (maxTimeInSeconds = 10) => {
+  //   const [elapsedTime, setElapsedTime] = useState(0);
+  //   const [progress, setProgress] = useState(0);
 
-// }
-// const useProgress = (maxTimeInSeconds = 300) => {
-//     const [elapsedTime, setElapsedTime] = useState(0);
-//     const [progress, setProgress] = useState(0);
+  //   useEffect(() => {
+  //     const intervalId = setInterval(() => {
+  //       if (progress < 1) {
+  //         setElapsedTime(t => t + 1);
+  //       }
+  //     }, 100);
+  //     return () => clearInterval(intervalId);
+  //   }, []);
 
-//     useEffect(() => {
-//       const intervalId = setInterval(() => {
-//         if (progress < 1) {
-//           setElapsedTime(t => t + 1);
-//         }
-//       }, 100);
-//       return () => clearInterval(intervalId);
-//     }, []);
+  //   useEffect(() => {
+  //     setProgress(elapsedTime / maxTimeInSeconds);
+  //   }, [elapsedTime]);
 
-//     useEffect(() => {
-//       setProgress(elapsedTime / maxTimeInSeconds);
-//     }, [elapsedTime]);
+  //   return progress;
+  // };
+  // const ProgressIn = useProgressin();
 
-//     return progress;
-//   };
+
+
+  var duration = parseInt(progress?.duration, 10) + 1;
+
   return (
     <View>
       <Spacer height={30} />
-      <Text>{progress.position}</Text>
-      <Text>{progress.buffered}</Text>
       <View
         style={{
           display: 'flex',
           flexDirection: 'row',
           justifyContent: 'space-evenly',
           alignItems: 'center',
+          position: 'relative',
         }}>
         {musicButton.map((music, index) => (
           <View key={index}>
-            <TouchableOpacity onPress={music.press} activeOpacity={0.6}>
+            <TouchableOpacity
+              style={{
+                // backgroundColor: colors.red,
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+              onPress={music.press}
+              activeOpacity={0.6}>
               <Image
                 source={music.image}
                 resizeMode={'contain'}
@@ -110,12 +108,28 @@ const MusicBody = () => {
                   width: index === 2 ? 80 : 17,
                 }}
               />
+              <View style={{position:"absolute", alignItems:"center", justifyContent:"center"}}>
+                {index == 2 ? (
+                  <Progress.Circle
+                    progress={1-Number(progress?.position) / duration}
+                    color={colors.secondary}
+                    borderRadius={20}
+                    size={80}
+                    thickness={5}
+                    borderColor={colors.primary}
+                    direction={"counter-clockwise"}
+                    style={{
+                      // width: '100%',
+                    }}
+                  />
+                ) : (
+                  <></>
+                )}
+              </View>
             </TouchableOpacity>
           </View>
         ))}
-        <Text>
-        
-        </Text>
+        {/* <Text></Text> */}
         {/* <View style={{color:colors.black}}>
             {TrackPlayer.setupPlayer}
         </View> */}
