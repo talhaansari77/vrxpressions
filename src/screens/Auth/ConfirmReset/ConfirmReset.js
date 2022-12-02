@@ -42,20 +42,24 @@ const ConfirmReset = ({navigation}) => {
         <Spacer height={10} />
         <TextInput
           placeholder="Password"
+          placeholderTextColor={colors.darkGray}
           style={{
-            color: colors.secondary,
-            fontSize:verticalScale(16),
-            paddingVertical:verticalScale(10),
+            color: colors.black,
+            fontSize: verticalScale(14),
+            paddingVertical: verticalScale(10),
+            fontFamily: Poppins.regular,
             borderBottomWidth: 1,
           }}
         />
-        <Spacer height={20}/>
+        <Spacer height={20} />
         <TextInput
           placeholder="Confirm Password"
+          placeholderTextColor={colors.darkGray}
           style={{
-            color: colors.secondary,
-            fontSize:verticalScale(16),
-            paddingVertical:verticalScale(10),
+            color: colors.black,
+            fontSize: verticalScale(14),
+            paddingVertical: verticalScale(10),
+            fontFamily: Poppins.regular,
             borderBottomWidth: 1,
           }}
         />
@@ -69,8 +73,11 @@ const ConfirmReset = ({navigation}) => {
         width={'50%'}
         height={verticalScale(35)}
         alignSelf={'center'}
+        onPress={()=>{
+          navigation.navigate("MainStack")
+
+        }}
       />
-      
 
       {/* </PH10> */}
     </ScrollView>

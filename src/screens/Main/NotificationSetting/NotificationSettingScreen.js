@@ -4,6 +4,7 @@ import CustomText from '../../../components/CustomText';
 import {colors} from '../../../utils/Colors';
 import CustomMenu from '../../../components/CustomMenu';
 import { Spacer } from '../../../components/Spacer';
+import CustomTitle from '../../../components/CustomTitle';
 
 const NotificationSettingScreen = () => {
     const SettingArray = [
@@ -21,7 +22,11 @@ const NotificationSettingScreen = () => {
   return (
     <View>
       <SafeAreaView>
-      <CustomTitle title={"Notification Setting"} />
+      <Spacer height={20} />
+
+      <CustomTitle 
+      fontSize={22}
+      title={"Notification Setting"} />
     <Spacer height={40} />
       {SettingArray.map((settings, index) => (
         <View key={index}>

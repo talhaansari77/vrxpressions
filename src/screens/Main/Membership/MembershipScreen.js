@@ -110,6 +110,7 @@ const MembershipScreen = () => {
     <View style={{flex: 1}}>
       <Spacer height={Platform.OS === 'ios' ? 40 : 5} />
       <PH10>
+        <Spacer height={20}/>
         <CustomText
           fontFamily={Poppins.bold}
           color={colors.secondary}

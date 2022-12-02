@@ -18,8 +18,8 @@ const CustomMenu = props => {
               justifyContent: 'space-between',
               width: '100%',
               paddingHorizontal: 20,
-              height: 80,
-              backgroundColor: colors.white,
+              height: verticalScale(60),
+              backgroundColor: "#F8F3FE",
               alignItems: 'center',
             }}>
             <CustomText fontSize={12} label={props.txt1} />
@@ -29,6 +29,7 @@ const CustomMenu = props => {
               <CustomText
                 fontSize={props.fontSize || 13}
                 label={props.txt2}
+                fontWeight={"400"}
                 marginRight={props.marginRight}
               />
               {/* // ) : props.icon ? ( */}
@@ -40,17 +41,6 @@ const CustomMenu = props => {
                     height: verticalScale(10),
                     width: scale(10),
                     alignSelf: 'center',
-                    // justifyContent:"center",
-                    // alignItems:"center",
-                    // alignContent:"center",
-                    // backgroundColor:"red",
-                    // marginTop:10
-                    // shadowColor: '#000',
-                    // shadowOffset: {width: 0, height: 3},
-                    // shadowOpacity: 0.4,
-                    // shadowRadius: 5,
-                    // backgroundColor: '#000',
-                    // paddingBottom: 50,
                   }}
                 />
               ) : (

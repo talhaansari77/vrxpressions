@@ -55,6 +55,10 @@ const Interests = ({navigation}) => {
         backgroundColor={colors.secondary}
         width={'50%'}
         height={verticalScale(35)}
+        onPress={()=>{
+          navigation.navigate("MainStack")
+
+        }}
         alignSelf={'center'}
       />
     </>

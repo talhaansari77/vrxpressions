@@ -51,11 +51,18 @@ import { colors } from './Colors';
     IosPadding:{
       flex: 1,paddingTop:Platform.OS=="ios"?verticalScale(40):5,
       paddingHorizontal:moderateScale(15),
-    }
+    },
+    IosContainer:{
+      flex: 1,paddingTop:Platform.OS=="ios"?verticalScale(40):5,
+    },
+
   });
 
   export const PH10 = styled(View, {
     paddingHorizontal: scale(10),
+  });
+  export const PH5 = styled(View, {
+    paddingHorizontal: scale(5),
   });
   export const PH20 = styled(View, {
     paddingHorizontal: scale(20),

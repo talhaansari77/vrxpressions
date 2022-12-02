@@ -8,7 +8,7 @@ const AccountSetting = () => {
   return (
     <View >
       <SafeAreaView>
-        <Spacer height={30} />
+        <Spacer height={20} />
       <AccountScreenHeader />
       <AccountScreenBody />
       </SafeAreaView>

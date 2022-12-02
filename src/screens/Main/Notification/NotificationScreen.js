@@ -1,4 +1,9 @@
-import {View, Text, SafeAreaView, FlatList, ScrollView, Platform} from 'react-native';
+import {
+  View,
+  FlatList,
+  ScrollView,
+  Platform,
+} from 'react-native';
 import React from 'react';
 import CustomTitle from '../../../components/CustomTitle';
 import {Spacer} from '../../../components/Spacer';
@@ -87,49 +92,54 @@ const NotificationScreen = () => {
   ];
 
   return (
-    <View>
+    <ScrollView showsVerticalScrollIndicator={false}>
       {/* <SafeAreaView> */}
-      <Spacer height={Platform.OS==="ios"?40:5} />
-        <CustomTitle title={'Notification'} />
-        <Spacer height={30} />
-        {/* <ScrollView> */}
-          <FlatList
-            data={notificationArray}
-            showsVerticalScrollIndicator={false}
-            renderItem={({item}) => {
-              console.log(item.title);
-              return (
-                <View style={{width: '100%', paddingHorizontal: 25}}>
-                  <View
-                    style={{
-                      display: 'flex',
-                      flexDirection: 'row',
-                      justifyContent: 'space-between',
-                    }}>
-                    <CustomText
-                      label={item.title}
-                      fontSize={12}
-                      fontFamily={'Poppins-Bold'}
-                    />
-                    <CustomText fontSize={6} label={item.date} />
-                  </View>
-                  <CustomText fontSize={6} label={item.detail} />
-                  <View
-                    style={{
-                      width: '100%',
-                      height: 1,
-                      backgroundColor: colors.black,
-                      marginTop: 5,
-                    }}
-                  />
-                  <Spacer height={10} />
-                </View>
-              );
-            }}
-          />
-        {/* </ScrollView> */}
-      {/* </SafeAreaView> */}
-    </View>
+      <Spacer height={Platform.OS === 'ios' ? 40 : 5} />
+      <Spacer height={20} />
+
+      <CustomTitle title={'Notification'} />
+      <Spacer height={30} />
+      {/* <ScrollView> */}
+      <FlatList
+        data={notificationArray}
+        showsVerticalScrollIndicator={false}
+        renderItem={({item}) => {
+          console.log(item.title);
+          return (
+            <View style={{width: '100%', paddingHorizontal: 25}}>
+              <View
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                }}>
+                <CustomText
+                  label={item.title}
+                  fontSize={12}
+                  fontFamily={'Poppins-Bold'}
+                />
+                <CustomText fontSize={6} label={item.date} />
+              </View>
+              <Spacer height={2} />
+              <CustomText fontSize={6} label={item.detail} />
+              <Spacer height={2} />
+
+              <View
+                style={{
+                  width: '100%',
+                  height: 1,
+                  backgroundColor: colors.black,
+                  marginTop: 5,
+                }}
+              />
+              <Spacer height={10} />
+            </View>
+          );
+        }}
+      />
+     
+    </ScrollView>
   );
 };
 

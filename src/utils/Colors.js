@@ -12,7 +12,10 @@ export const colors = {
     lightBlack:"#BFBACB",
     red: 'red',
     grey:"#B7B7B7",
-    black1:"#000000"
+    lightGray:"#8E8E93",
+    black1:"#000000",
+    darkGray:"#343a40",
+    tabColor:"#DFD2FD",
   };
   
   

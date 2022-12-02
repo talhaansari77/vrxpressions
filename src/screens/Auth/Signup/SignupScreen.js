@@ -49,6 +49,8 @@ const SignupScreen = ({navigation}) => {
         fontFamily={Poppins.bold}
         backgroundColor={colors.secondary}
         width={'50%'}
+        onPress={()=>{
+          navigation.navigate("OtpScreen")}}
         height={verticalScale(35)}
         alignSelf={'center'}
       />

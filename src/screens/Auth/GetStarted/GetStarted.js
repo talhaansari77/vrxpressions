@@ -25,6 +25,7 @@ const GetStarted = ({navigation}) => {
     <>
       <View style={{...commonStyles.IosPadding, flex: 0}}>
         {/* <PH10> */}
+        <Spacer height={10}/>
 
         <CustomText
           fontFamily={Poppins.bold}
@@ -55,6 +56,10 @@ const GetStarted = ({navigation}) => {
           width={'50%'}
           height={verticalScale(35)}
           alignSelf={'center'}
+          onPress={()=>{
+            navigation.navigate("Interests",)
+
+          }}
         />
 
         {/* </PH10> */}

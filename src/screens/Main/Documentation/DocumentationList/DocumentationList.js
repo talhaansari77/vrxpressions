@@ -10,17 +10,17 @@ const DocumentationList = ({navigation}) => {
     {
       id: 1,
       name: 'Terms and Conditions',
-      onPress: ()=>{navigation.navigate("TermsAndConditions")}
+      onPress: ()=>{navigation.navigate("TermsAndConditionsScreen")}
     },
     {
       id: 2,
       name: 'Privacy Policy',
-      onPress: ()=>{navigation.navigate("PrivacyPolicy")}
+      onPress: ()=>{navigation.navigate("PrivacyPolicyScreen")}
     },
     {
       id: 3,
       name: 'Disclaimer',
-      onPress: ()=>{navigation.navigate("Disclaimer")}
+      onPress: ()=>{navigation.navigate("DisclaimerScreen")}
     },
   ];
   return (

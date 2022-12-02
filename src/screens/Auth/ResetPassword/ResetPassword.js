@@ -42,16 +42,18 @@ const OtpScreen = ({navigation}) => {
         <Spacer height={10} />
         <TextInput
           placeholder="Email"
+          placeholderTextColor={colors.darkGray}
           style={{
-            color: colors.secondary,
-            fontSize:verticalScale(16),
+            color: colors.black,
+            fontSize:verticalScale(13),
             paddingVertical:verticalScale(10),
             borderBottomWidth: 1,
+            fontFamily:Poppins.regular
           }}
         />
       </PH20>
 
-      <Spacer height={20} />
+      <Spacer height={30} />
       <CustomButton
         title={'Send'}
         fontFamily={Poppins.bold}
@@ -59,6 +61,10 @@ const OtpScreen = ({navigation}) => {
         width={'50%'}
         height={verticalScale(35)}
         alignSelf={'center'}
+        onPress={()=>{
+          navigation.navigate("OtpScreen",{reset:true})
+
+        }}
       />
       
 

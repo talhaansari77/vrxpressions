@@ -84,9 +84,9 @@ const ProfileScreen = () => {
         style={{
           backgroundColor: colors.primary,
           width: '100%',
-          paddingHorizontal: 10,
+          paddingHorizontal: scale(15),
         }}>
-        <Spacer height={30} />
+        <Spacer height={20} />
         <CustomText
           label={'profile'}
           fontSize={30}
@@ -94,35 +94,41 @@ const ProfileScreen = () => {
           color={colors.secondary}
         />
         <Spacer height={30} />
-
-        <Image
-          source={images.ProfilePicture}
-          resizeMode={'contain'}
+        <View
           style={{
-            height: verticalScale(180),
-            width: scale(220),
-            alignSelf: 'center',
-            shadowColor: '#000',
-            shadowOffset: {width: 0, height: 3},
-            shadowOpacity: 0.4,
-            shadowRadius: 5,
-            // backgroundColor: '#000',
-            paddingBottom: 50,
-          }}
-        />
+            flexDirection: 'row',
+            alignItems: 'center',
+            width: '100%',
+            justifyContent: 'flex-end',
+          }}>
+          <Image
+            source={images.ProfilePicture}
+            resizeMode={'contain'}
+            style={{
+              height: verticalScale(180),
+              width: scale(220),
+              alignSelf: 'center',
+              shadowColor: '#000',
+              shadowOffset: {width: 0, height: 3},
+              shadowOpacity: 0.4,
+              shadowRadius: 5,
+              marginRight: verticalScale(10),
+              paddingBottom: 50,
+            }}
+          />
 
-        <CustomButton
-          title={'Edit'}
-          height={25}
-          width={50}
-          backgroundColor={colors.secondary}
-          fontSize={8}
-          shadowOpacity={0.1}
-          color={colors.black}
-          borderRadius={40}
-          alignSelf={"flex-end"}
-          bottom={80}
-        />
+          <CustomButton
+            title={'Edit'}
+            height={25}
+            width={50}
+            backgroundColor={colors.secondary}
+            fontSize={8}
+            marginTop={verticalScale(70)}
+            shadowOpacity={0.1}
+            color={colors.black}
+            borderRadius={40}
+          />
+        </View>
 
         <Spacer height={50} />
 
