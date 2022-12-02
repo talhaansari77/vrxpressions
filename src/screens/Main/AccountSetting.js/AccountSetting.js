@@ -4,13 +4,13 @@ import AccountScreenBody from './Molecules/AccountScreenBody'
 import AccountScreenHeader from './Molecules/AccountScreenHeader'
 import { Spacer } from '../../../components/Spacer'
 
-const AccountSetting = () => {
+const AccountSetting = ({navigation}) => {
   return (
     <View >
       <SafeAreaView>
         <Spacer height={20} />
       <AccountScreenHeader />
-      <AccountScreenBody />
+      <AccountScreenBody navigation={navigation}/>
       </SafeAreaView>
     </View>
   )

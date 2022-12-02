@@ -7,7 +7,7 @@ import { Spacer } from '../../../../components/Spacer'
 import CustomText from '../../../../components/CustomText'
 import { Poppins } from '../../../../utils/Fonts'
 import { colors } from '../../../../utils/Colors'
-const MeditationMainImg = () => {
+const MeditationMainImg = ({navigation}) => {
   return (
     <View style={{alignItems:"center"}}>
         <Spacer height={20}/>
@@ -26,6 +26,10 @@ const MeditationMainImg = () => {
         fontSize={23}
         label={'Meditation'}
         marginLeft={10}
+        onPress={()=>{
+          navigation.navigate("MusicListScreen")
+
+        }}
       />
 
     </View>

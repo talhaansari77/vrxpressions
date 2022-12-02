@@ -1,4 +1,4 @@
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, ScrollView} from 'react-native';
 import React from 'react';
 import CustomText from '../../../components/CustomText';
 import {Poppins} from '../../../utils/Fonts';
@@ -20,18 +20,24 @@ const MembershipScreen = () => {
       price: '',
       duration: '',
       btnLabel: 'Purchased',
+      color1:"#3EC8FF",
+      color2:"#8E97FD"
     },
     {
       id: 2,
       price: '$19.99',
       duration: '/month',
       btnLabel: 'Upgrade',
+      color1:"#3EC8FF",
+      color2:"#AEAFF7"
     },
     {
       id: 3,
       price: '$49.99',
       duration: '/6 months',
       btnLabel: 'Upgrade',
+      color1:"#8E97FD",
+      color2:"#9063EA"
     },
   ];
   const TextWithIcon = () => (
@@ -56,7 +62,7 @@ const MembershipScreen = () => {
       />
     </View>
   );
-  const MembershipCard = ({price, btnLabel, duration}) => (
+  const MembershipCard = ({price, btnLabel, duration,color1,color2}) => (
     <LinearGradient
       start={{x: 1, y: 0}}
       end={{x: 0, y: 0}}
@@ -66,7 +72,7 @@ const MembershipScreen = () => {
         alignSelf: 'center',
         borderRadius: moderateScale(20),
       }}
-      colors={['#3EC8FF', '#8E97FD']}>
+      colors={[color1, color2]}>
       <Spacer height={20} />
       <Image
         source={icons.Crown}
@@ -99,15 +105,14 @@ const MembershipScreen = () => {
           backgroundColor={'#8E97FD'}
           width={200}
           height={50}
-          shadowColor={colors.white}
-          shadowOpacity={0.8}
-          shadowHeight={-5}
         />
       </Center>
     </LinearGradient>
   );
   return (
-    <View style={{flex: 1}}>
+    <ScrollView style={{flex: 1}}
+    showsVerticalScrollIndicator={false}
+    >
       <Spacer height={Platform.OS === 'ios' ? 40 : 5} />
       <PH10>
         <Spacer height={20}/>
@@ -123,6 +128,7 @@ const MembershipScreen = () => {
       <Spacer height={20} />
       <FlatList
         data={cards}
+        showsVerticalScrollIndicator={false}
         // numColumns={5}
         // columnWrapperStyle={{flex: 1, justifyContent: 'space-between'}}
         renderItem={({item}) => (
@@ -131,6 +137,8 @@ const MembershipScreen = () => {
               price={item.price}
               duration={item.duration}
               btnLabel={item.btnLabel}
+              color1={item.color1}
+              color2={item.color2}
             />
             <Spacer height={15} />
           </>
@@ -138,7 +146,7 @@ const MembershipScreen = () => {
         keyExtractor={item => item.id}
       />
       {/* <MembershipCard/> */}
-    </View>
+    </ScrollView>
   );
 };
 

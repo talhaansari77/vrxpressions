@@ -19,15 +19,12 @@ const MeditationScreen = ({navigation}) => {
         fontSize={23}
         label={'Meditation'}
         marginLeft={10}
-        onPress={()=>{
-          navigation.navigate("MusicPlayerScreen")
-
-        }}
+      
       />
             <Spacer height={10}/>
 
 
-      <MeditationMainImg/>
+      <MeditationMainImg navigation={navigation}/>
       <Spacer height={30}/>
 
       <TimerContainer/>

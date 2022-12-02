@@ -6,7 +6,7 @@ import {colors} from '../../../../utils/Colors';
 import {Spacer} from '../../../../components/Spacer';
 import CustomMenu from '../../../../components/CustomMenu';
 
-const AccountScreenBody = () => {
+const AccountScreenBody = ({navigation}) => {
   const SettingArray = [
     {
       id: 1,
@@ -17,6 +17,10 @@ const AccountScreenBody = () => {
       id: 2,
       name: 'Password',
       info: '*********',
+      onClicked:()=>{
+        navigation.navigate("PasswordSetting")
+
+      }
     },
     {
       id: 3,
@@ -49,6 +53,7 @@ const AccountScreenBody = () => {
             <CustomMenu
               txt1={settings.name}
               txt2={settings.info}
+              onClicked={settings.onClicked}
             />
           </View>
             <View

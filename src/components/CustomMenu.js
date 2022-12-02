@@ -31,6 +31,7 @@ const CustomMenu = props => {
                 label={props.txt2}
                 fontWeight={"400"}
                 marginRight={props.marginRight}
+                alignSelf={props.alignSelf}
               />
               {/* // ) : props.icon ? ( */}
               {props.image ? (

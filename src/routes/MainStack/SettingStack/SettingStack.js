@@ -6,10 +6,12 @@ import AccountSetting from '../../../screens/Main/AccountSetting.js/AccountSetti
 import NotificationSettingScreen from '../../../screens/Main/NotificationSetting/NotificationSettingScreen';
 import DocumentationList from '../../../screens/Main/Documentation/DocumentationList/DocumentationList';
 import MemberShipMenu from '../../../screens/Main/MemberShipMenu';
-import MembershipScreen from '../../../screens/Main/Membership/MembershipScreen';
+// import MembershipScreen from '../../../screens/Main/Membership/MembershipScreen';
 import TermsAndConditions from '../../../screens/Main/Documentation/DocumentationDetail/TermsAndConditions/TermsAndConditions';
 import PrivacyPolicy from '../../../screens/Main/Documentation/DocumentationDetail/PrivacyPolicy';
 import Disclaimer from '../../../screens/Main/Documentation/DocumentationDetail/Disclaimer/Disclaimer';
+import MembershipScreen from '../../../screens/Main/Membership/MembershipScreen';
+import PasswordSetting from '../../../screens/Main/PasswordSetting/PasswordSetting';
 
 const SettingStack = ({navigation}) => {
   const Stack = createStackNavigator();
@@ -23,6 +25,8 @@ const SettingStack = ({navigation}) => {
       />
 
       <Stack.Screen name="AccountSetting" component={AccountSetting} />
+      <Stack.Screen name="PasswordSetting" component={PasswordSetting} />
+
       <Stack.Screen
         name="NotificationSettingScreen"
         component={NotificationSettingScreen}

@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   Image,
   ImageStore,
+  ScrollView,
 } from 'react-native';
 import React, {useEffect, useState} from 'react';
 import TrackPlayer, {useProgress} from 'react-native-track-player';
@@ -45,8 +46,8 @@ const MusicBody = () => {
       id: 4,
       image: images.forward,
       press: () => {
-        progress.position  / parseInt(progress?.duration) + 1000
-      }
+        progress.position / parseInt(progress?.duration) + 1000;
+      },
     },
     {
       id: 5,
@@ -75,26 +76,22 @@ const MusicBody = () => {
   // };
   // const ProgressIn = useProgressin();
 
-
-
   var duration = parseInt(progress?.duration, 10) + 1;
 
   return (
-    <View>
-      <Spacer height={30} />
+    <ScrollView>
+      {/* <Spacer height={25} /> */}
       <View
         style={{
-          display: 'flex',
           flexDirection: 'row',
           justifyContent: 'space-evenly',
           alignItems: 'center',
-          position: 'relative',
+
         }}>
         {musicButton.map((music, index) => (
           <View key={index}>
             <TouchableOpacity
               style={{
-                // backgroundColor: colors.red,
                 alignItems: 'center',
                 justifyContent: 'center',
               }}
@@ -102,26 +99,30 @@ const MusicBody = () => {
               activeOpacity={0.6}>
               <Image
                 source={music.image}
-                resizeMode={'contain'}
+                // resizeMode={'contain'}
                 style={{
-                  height: index === 2 ? 80 : 17,
-                  width: index === 2 ? 80 : 17,
+                  height: index === 2 ? 70 : 17,
+                  width: index === 2 ? 70 : 17,
                 }}
               />
-              <View style={{position:"absolute", alignItems:"center", justifyContent:"center"}}>
+              <View
+                style={{
+                  position: 'absolute',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}>
                 {index == 2 ? (
                   <Progress.Circle
-                    progress={1-Number(progress?.position) / duration}
+                    progress={1 - Number(progress?.position) / duration}
                     color={colors.secondary}
                     borderRadius={20}
-                    size={80}
+                    size={70}
                     thickness={5}
                     borderColor={colors.primary}
-                    direction={"counter-clockwise"}
-                    style={{
-                      // width: '100%',
-                    }}
-                  />
+                    direction={'counter-clockwise'}
+                  >
+                    
+                  </Progress.Circle>
                 ) : (
                   <></>
                 )}
@@ -129,17 +130,8 @@ const MusicBody = () => {
             </TouchableOpacity>
           </View>
         ))}
-        {/* <Text></Text> */}
-        {/* <View style={{color:colors.black}}>
-            {TrackPlayer.setupPlayer}
-        </View> */}
-        {/* <Image source={images.loop2} resizeMode={"contain"} style={{height:17, width:17}} />
-            <Image source={images.backword} resizeMode={"contain"} style={{height:17, width:17}} />
-            <Image source={images.pauseButton} resizeMode={"contain"} style={{height:80, width:80}} />
-            <Image source={images.forward} resizeMode={"contain"} style={{height:17, width:17}} />
-            <Image source={images.loop1} resizeMode={"contain"} style={{height:17, width:17}} /> */}
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
