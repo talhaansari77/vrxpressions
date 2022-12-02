@@ -22,6 +22,8 @@ export const images = {
   forward: require('../images/forward.png'),
   pauseButton: require('../images/pauseButton.png'),
   playButton: require('../images/playButton.png'),
+  music2: require('../images/music2.png'),
+  purplePlay: require('../images/purplePlay.png'),
   
 };
 

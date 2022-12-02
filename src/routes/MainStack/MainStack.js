@@ -14,13 +14,14 @@ import Disclaimer from '../../screens/Main/Documentation/DocumentationDetail/Dis
 import NotificationScreen from '../../screens/Main/Notification/NotificationScreen';
 import MemberShipMenu from '../../screens/Main/MemberShipMenu';
 import MusicPlayerScreen from '../../screens/Main/MusicPlayer/MusicPlayerScreen';
+import MusicListScreen from '../../screens/Main/MusicPlayer/MusicListScreen/MusicListScreen';
 
 const MainStack = () => {
   const Stack = createStackNavigator();
   return (
     <Stack.Navigator
       screenOptions={{headerShown: false}}
-      initialRouteName={'MusicPlayerScreen'}
+      initialRouteName={'MusicListScreen'}
     >
       <Stack.Screen name="SummaryScreen" component={SummaryScreen} />
       <Stack.Screen name="ActivitiesScreen" component={Activities} />
@@ -43,6 +44,7 @@ const MainStack = () => {
       <Stack.Screen name="Disclaimer" component={Disclaimer} />
       <Stack.Screen name="NotificationScreen" component={NotificationScreen} />
       <Stack.Screen name="MusicPlayerScreen" component={MusicPlayerScreen} />
+      <Stack.Screen name="MusicListScreen" component={MusicListScreen} />
 
 
 
