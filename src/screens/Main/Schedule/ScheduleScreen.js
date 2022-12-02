@@ -11,7 +11,7 @@ import {colors} from '../../../utils/Colors';
 
 const dayData = ['SU', 'M', 'T', 'W', 'TH', 'F', 'S'];
 
-const ScheduleScreen = () => {
+const ScheduleScreen = ({navigation}) => {
   return (
     <SafeAreaView>
       <ScheduleHeader />
@@ -35,6 +35,10 @@ const ScheduleScreen = () => {
           backgroundColor={colors.secondary}
           alignSelf="center"
           fontSize={16}
+          onPress={()=>{
+            navigation.navigate("MeditationScreen")
+
+          }}
           shadowOpacity={0.3}
         />
       </PH5>

@@ -1,34 +1,35 @@
 import {View, Text, Image, Platform} from 'react-native';
-import {createStackNavigator} from '@react-navigation/stack';
+// import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-import ChatScreen from '../../screens/Main/Chat/ChatScreen';
-import AudioCallScreen from '../../screens/Main/Chat/AudioCall/AudioCallScreen';
-import VideoCallScreen from '../../screens/Main/Chat/VideoCall/VideoCallScreen';
-import Activities from '../../screens/Main/Activities';
+// import ChatScreen from '../../screens/Main/Chat/ChatScreen';
+// import AudioCallScreen from '../../screens/Main/Chat/AudioCall/AudioCallScreen';
+// import VideoCallScreen from '../../screens/Main/Chat/VideoCall/VideoCallScreen';
+// import Activities from '../../screens/Main/Activities';
 // import MembershipScreen from '../../screens/Main/Membership/MembershipScreen';
 import ProfileScreen from '../../screens/Main/Profile/ProfileScreen';
-import ProfileSettingScreen from '../../screens/Main/ProfileSetting/ProfileSettingScreen';
-import AccountSetting from '../../screens/Main/AccountSetting.js/AccountSetting';
-import NotificationSettingScreen from '../../screens/Main/NotificationSetting/NotificationSettingScreen';
-import DocumentationList from '../../screens/Main/Documentation/DocumentationList/DocumentationList';
-import TermsAndConditions from '../../screens/Main/Documentation/DocumentationDetail/TermsAndConditions/TermsAndConditions';
-import PrivacyPolicy from '../../screens/Main/Documentation/DocumentationDetail/PrivacyPolicy';
-import Disclaimer from '../../screens/Main/Documentation/DocumentationDetail/Disclaimer/Disclaimer';
+// import ProfileSettingScreen from '../../screens/Main/ProfileSetting/ProfileSettingScreen';
+// import AccountSetting from '../../screens/Main/AccountSetting.js/AccountSetting';
+// import NotificationSettingScreen from '../../screens/Main/NotificationSetting/NotificationSettingScreen';
+// import DocumentationList from '../../screens/Main/Documentation/DocumentationList/DocumentationList';
+// import TermsAndConditions from '../../screens/Main/Documentation/DocumentationDetail/TermsAndConditions/TermsAndConditions';
+// import PrivacyPolicy from '../../screens/Main/Documentation/DocumentationDetail/PrivacyPolicy';
+// import Disclaimer from '../../screens/Main/Documentation/DocumentationDetail/Disclaimer/Disclaimer';
 import NotificationScreen from '../../screens/Main/Notification/NotificationScreen';
 // import SignOutScreen from '../../screens/Main/SignOut/SignOutScreen';
 import SummaryScreen from '../../screens/Main/Summary/SummaryScreen';
 import PeopleScreen from '../../screens/Main/Chat/People/PeopleScreen';
 import ScheduleScreen from '../../screens/Main/Schedule/ScheduleScreen';
-import MeditationScreen from '../../screens/Main/Meditation/MeditationScreen';
-import MemberShipMenu from '../../screens/Main/MemberShipMenu';
-import MusicPlayerScreen from '../../screens/Main/MusicPlayer/MusicPlayerScreen';
+// import MeditationScreen from '../../screens/Main/Meditation/MeditationScreen';
+// import MemberShipMenu from '../../screens/Main/MemberShipMenu';
+// import MusicPlayerScreen from '../../screens/Main/MusicPlayer/MusicPlayerScreen';
 import {colors} from '../../utils/Colors';
-import Foundation from 'react-native-vector-icons/Foundation';
+// import Foundation from 'react-native-vector-icons/Foundation';
 import {icons} from '../../assets/icons';
 import {verticalScale, scale, moderateScale} from 'react-native-size-matters';
 import ChatStack from './ChatStack/ChatStack';
 import SettingStack from './SettingStack/SettingStack';
+import ActivitiesStack from './ActivitiesStack/ActivitiesStack';
 // import Summary from '../../screens/Auth/Login copy';
 
 const MainStack = () => {
@@ -57,14 +58,7 @@ const MainStack = () => {
           let iconName;
           if (route.name === 'SummaryScreen') {
             iconName = icons.home;
-            // return (
-            //   <Foundation
-            //     name="home"
-            //     color={colors.white}
-            //     size={moderateScale(25)}
-            //   />
-            // );
-          } else if (route.name === 'ActivitiesScreen') {
+          } else if (route.name === 'ActivitiesStack') {
             iconName = icons.exercise;
           }
            else if (route.name === 'ChatStack') {
@@ -104,8 +98,11 @@ const MainStack = () => {
       }}
       initialRouteName="SummaryScreen">
       <Tab.Screen name="SummaryScreen" component={SummaryScreen} />
-      <Tab.Screen name="ActivitiesScreen" component={Activities} />
-      
+
+
+      <Tab.Screen name="ActivitiesStack" component={ActivitiesStack} />
+
+
       <Tab.Screen name="ChatStack" component={ChatStack} />
       <Tab.Screen name="ProfileScreen" component={ProfileScreen} />
 

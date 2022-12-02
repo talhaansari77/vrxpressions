@@ -43,12 +43,10 @@ function CustomButton({
   shadowHeight,
   top,
   left,
-  bottom
+  bottom,
 }) {
   return (
-    <TouchableOpacity
-      disabled={loading}
-      activeOpacity={0.6}
+    <View
       style={[
         {
           backgroundColor: backgroundColor || colors.primary,
@@ -57,48 +55,61 @@ function CustomButton({
           borderRadius: borderRadius || 30,
           alignItems: alignItems || 'center',
           justifyContent: justifyContent || 'center',
-          marginTop:marginTop,
+          marginTop: marginTop,
           marginBottom: marginBottom,
           marginHorizontal: marginHorizontal,
           alignSelf: alignSelf,
-          shadowColor:
-            Platform.OS == 'ios'
-              ? shadowColor
-                ? shadowColor
-                : '#212529'
-              : shadowColor
-              ? shadowColor
-              : colors.black,
+          shadowColor: colors.white,
           shadowRadius: 4,
           elevation: 5,
-          alignItems: 'center',
-          shadowOpacity: shadowOpacity ||0.4,
-          justifyContent: 'center',
+          shadowOpacity: 0.4,
           // top: top || -50,
           // left: left || 320,
-          shadowOffset: {width: 1, height: shadowHeight||2},
-
-          
+          shadowOffset: {width: 1, height: -5},
         },
-      ]}
-      onPress={onPress}>
-      {loading ? (
-        <ActivityIndicator color={colors.white} size={moderateScale(26)} />
-      ) : (
-        <View style={{flexDirection: 'row'}}>
-          <Text
-            style={[
-              {
-                color: color || colors.white,
-                fontSize: verticalScale(fontSize || 14),
-                fontFamily: fontFamily || Poppins.bold,
-              },
-            ]}>
-            {title}
-          </Text>
-        </View>
-      )}
-    </TouchableOpacity>
+      ]}>
+      {/* 212529 */}
+      <TouchableOpacity
+        disabled={loading}
+        activeOpacity={0.6}
+        style={{
+          backgroundColor: backgroundColor || colors.primary,
+          width: '100%',
+          height: '100%',
+          borderRadius: borderRadius || 30,
+          alignItems: alignItems || 'center',
+          justifyContent: justifyContent || 'center',
+          marginTop: marginTop,
+          marginBottom: marginBottom,
+          marginHorizontal: marginHorizontal,
+          alignSelf: alignSelf,
+          shadowColor: Platform.OS == 'ios' ? '#212529' : colors.black,
+          shadowRadius: 4,
+          elevation: 5,
+          shadowOpacity: 0.4,
+          // top: top || -50,
+          // left: left || 320,
+          shadowOffset: {width: 1, height: 5},
+        }}
+        onPress={onPress}>
+        {loading ? (
+          <ActivityIndicator color={colors.white} size={moderateScale(26)} />
+        ) : (
+          <View style={{flexDirection: 'row'}}>
+            <Text
+              style={[
+                {
+                  color: color || colors.white,
+                  fontSize: verticalScale(fontSize || 14),
+                  fontFamily: fontFamily || Poppins.bold,
+                },
+              ]}>
+              {title}
+            </Text>
+          </View>
+        )}
+      </TouchableOpacity>
+    </View>
   );
 }
 

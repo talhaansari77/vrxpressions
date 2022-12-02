@@ -20,14 +20,16 @@ import PrimaryCard from '../../Auth/Interests/Molecules/PrimaryCard';
 import {images} from '../../../assets/images';
 import CustomButton from '../../../components/CustomButton';
 import TopBar from './Molecules/TopBar';
+import { useNavigation } from '@react-navigation/native';
 
-const Activities = () => {
+const Activities = ({navigation}) => {
   const [visible, setVisible] = useState(false);
   const [activeTab, setActiveTab] = useState('Intermediate');
   const screenHeight = Dimensions.get('window').height;
   const screenWidth = Dimensions.get('window').width;
 
   const ModalContent = () => (
+
     <View
       style={{position: 'absolute', bottom: 0, height: '62.5%', width: '100%'}}>
       <Image
@@ -97,6 +99,13 @@ const Activities = () => {
             title={'Schedule'}
             backgroundColor={colors.secondary}
             height={screenHeight / 18}
+            onPress={()=>{
+              setVisible(false)
+
+              navigation.navigate("ScheduleScreen")
+
+            }}
+            
             width={screenWidth / 2.5}
             borderRadius={12}
           />

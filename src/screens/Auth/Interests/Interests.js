@@ -14,6 +14,7 @@ const Interests = ({navigation}) => {
     <>
       <View style={{...commonStyles.IosPadding, flex: 0}}>
         {/* <PH10> */}
+        <Spacer height={20} />
 
         <CustomText
           fontFamily={Poppins.bold}
@@ -21,32 +22,32 @@ const Interests = ({navigation}) => {
           fontSize={30}
           label={'LARA BLAKE'}
         />
-        <CustomText
-          fontFamily={Poppins.regular}
-          color={colors.black}
-          fontSize={12}
-          label={'What brings you to'}>
+                <Spacer height={10} />
+
+        <View style={{flexDirection: 'row'}}>
+          <CustomText
+            fontFamily={Poppins.regular}
+            color={colors.black}
+            fontSize={12}
+            fontWeight="400"
+            label={'What brings you to'}
+          />
           <CustomText
             ontFamily={Poppins.regular}
             color={colors.black}
-            fontSize={20}>
-            VR Xpression
-          </CustomText>
-        </CustomText>
-        {/* <Text>
-          What brings you to
-          <Text style={{fontSize: 30,position:'relative',top:10}}>VR Xpression</Text>
-        </Text> */}
+            fontSize={20}
+            label="VR Xpression"
+            marginLeft={3}
+            marginTop={4}
+          />
+        </View>
+
+       
       </View>
       <Spacer height={50} />
 
-      {/* <View
-        style={{
-          height: '50%',
-          width: '50%',
-        }}> */}
-      <PrimaryCard fontSize={18} badge={1} pHeight={'45%'} pWidth={'80%'} />
-      {/* </View> */}
+      
+      <PrimaryCard fontSize={18} badge={1} pHeight={'45%'} pWidth={'85%'} />
       <Spacer height={100} />
 
       <CustomButton
@@ -55,9 +56,8 @@ const Interests = ({navigation}) => {
         backgroundColor={colors.secondary}
         width={'50%'}
         height={verticalScale(35)}
-        onPress={()=>{
-          navigation.navigate("MainStack")
-
+        onPress={() => {
+          navigation.navigate('MainStack');
         }}
         alignSelf={'center'}
       />

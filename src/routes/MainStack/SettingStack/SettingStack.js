@@ -6,75 +6,53 @@ import AccountSetting from '../../../screens/Main/AccountSetting.js/AccountSetti
 import NotificationSettingScreen from '../../../screens/Main/NotificationSetting/NotificationSettingScreen';
 import DocumentationList from '../../../screens/Main/Documentation/DocumentationList/DocumentationList';
 import MemberShipMenu from '../../../screens/Main/MemberShipMenu';
-import MembershipScreen from '../../../screens/Main/Membership/MembershipScreen';
+import MembershipScreen from '../../../screens/Main/MemberShip/MembershipScreen';
 import TermsAndConditions from '../../../screens/Main/Documentation/DocumentationDetail/TermsAndConditions/TermsAndConditions';
 import PrivacyPolicy from '../../../screens/Main/Documentation/DocumentationDetail/PrivacyPolicy';
 import Disclaimer from '../../../screens/Main/Documentation/DocumentationDetail/Disclaimer/Disclaimer';
-
-
 
 const SettingStack = ({navigation}) => {
   const Stack = createStackNavigator();
   return (
     <Stack.Navigator
       screenOptions={{headerShown: false}}
-      initialRouteName={"ProfileSettingScreen"}
-    >
-     <Stack.Screen name="ProfileSettingScreen" component={ProfileSettingScreen} />
+      initialRouteName={'ProfileSettingScreen'}>
+      <Stack.Screen
+        name="ProfileSettingScreen"
+        component={ProfileSettingScreen}
+      />
 
-       <Stack.Screen name="AccountSetting" component={AccountSetting} />
+      <Stack.Screen name="AccountSetting" component={AccountSetting} />
       <Stack.Screen
         name="NotificationSettingScreen"
         component={NotificationSettingScreen}
       />
 
-            <Stack.Screen name="MemberShipMenu" component={MemberShipMenu} />
-            <Stack.Screen name="MemberShipScreen" component={MembershipScreen} />
-
-
+      <Stack.Screen name="MemberShipMenu" component={MemberShipMenu} />
+      <Stack.Screen name="MemberShipScreen" component={MembershipScreen} />
 
       <Stack.Screen name="DocumentationList" component={DocumentStack} />
-
-
-
-  
-
-
     </Stack.Navigator>
   );
 };
 
+export const DocumentStack = ({navigation}) => {
+  const Stack = createStackNavigator();
+  return (
+    <Stack.Navigator
+      screenOptions={{headerShown: false}}
+      initialRouteName={'DocumentationScreen'}>
+      <Stack.Screen name="DocumentationScreen" component={DocumentationList} />
 
+      <Stack.Screen
+        name="TermsAndConditionsScreen"
+        component={TermsAndConditions}
+      />
 
-export  const DocumentStack = ({navigation}) => {
-    const Stack = createStackNavigator();
-    return (
-      <Stack.Navigator
-        screenOptions={{headerShown: false}}
-        initialRouteName={"DocumentationScreen"}
-      >
-                <Stack.Screen name="DocumentationScreen" component={DocumentationList} />
-
-       <Stack.Screen name="TermsAndConditionsScreen" component={TermsAndConditions} />
-  
-         <Stack.Screen name="PrivacyPolicyScreen" component={PrivacyPolicy} />
-        <Stack.Screen
-          name="DisclaimerScreen"
-          component={Disclaimer}
-        />
-  
-  
-  
-  
-  
-  
-  
-    
-  
-  
-      </Stack.Navigator>
-    );
-  };
-
+      <Stack.Screen name="PrivacyPolicyScreen" component={PrivacyPolicy} />
+      <Stack.Screen name="DisclaimerScreen" component={Disclaimer} />
+    </Stack.Navigator>
+  );
+};
 
 export default SettingStack;
