@@ -1,4 +1,4 @@
-import {View, Text, Image, TouchableOpacity} from 'react-native';
+import {View, Text, Image, TouchableOpacity, Platform} from 'react-native';
 import React, {useState} from 'react';
 import {colors} from '../../../../utils/Colors';
 import {moderateScale} from 'react-native-size-matters';
@@ -24,11 +24,11 @@ const PrimaryCard = ({
     height: pHeight || '100%',
     width: pWidth || '100%',
     alignSelf: 'center',
-    shadowColor: colors.black,
-    shadowOffset: {width: 0, height: 1},
-    shadowOpacity: 0.2,
-    shadowRadius: 5,
-    elevation: 4,
+    // shadowColor: Platform.OS=="ios"? "#212529" : colors.black,
+    // shadowOffset: {width: 0, height: 1},
+    // shadowOpacity: 0.2,
+    // shadowRadius: 3,
+    // elevation: 4,
   };
   const cardImageStyle = {
     width: imageWidth||'100%',

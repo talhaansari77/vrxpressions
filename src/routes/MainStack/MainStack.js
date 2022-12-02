@@ -29,6 +29,7 @@ import {icons} from '../../assets/icons';
 import {verticalScale, scale, moderateScale} from 'react-native-size-matters';
 import ChatStack from './ChatStack/ChatStack';
 import SettingStack from './SettingStack/SettingStack';
+import ActivitiesStack from './ActivitiesStack/ActivitiesStack';
 // import Summary from '../../screens/Auth/Login copy';
 
 const MainStack = () => {
@@ -57,14 +58,7 @@ const MainStack = () => {
           let iconName;
           if (route.name === 'SummaryScreen') {
             iconName = icons.home;
-            // return (
-            //   <Foundation
-            //     name="home"
-            //     color={colors.white}
-            //     size={moderateScale(25)}
-            //   />
-            // );
-          } else if (route.name === 'ActivitiesScreen') {
+          } else if (route.name === 'ActivitiesStack') {
             iconName = icons.exercise;
           } else if (route.name === 'ChatStack') {
             iconName = icons.chat;
@@ -100,7 +94,7 @@ const MainStack = () => {
       // }}
       initialRouteName="SummaryScreen">
       <Tab.Screen name="SummaryScreen" component={SummaryScreen} />
-      <Tab.Screen name="ActivitiesScreen" component={Activities} />
+      <Tab.Screen name="ActivitiesStack" component={ActivitiesStack} />
 
       <Tab.Screen name="ChatStack" component={ChatStack} />
       <Tab.Screen name="ProfileScreen" component={ProfileScreen} />

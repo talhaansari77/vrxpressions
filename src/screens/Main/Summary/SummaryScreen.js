@@ -163,7 +163,7 @@ const SummaryScreen = () => {
       ) : (
         <></>
       )}
-      {!item.topIcon ? <></> : <Spacer height={15} />}
+      {!item.topIcon ? <></> : <Spacer height={10} />}
       <PH10>
         <View
           style={{
@@ -199,8 +199,8 @@ const SummaryScreen = () => {
   const CircleIcon = ({color, icon, topIcon}) => (
     <View
       style={{
-        height: 50,
-        width: 50,
+        height: 40,
+        width: 40,
         borderRadius: 25,
         backgroundColor: color,
         top: !topIcon ? 12 : 0,
@@ -246,7 +246,7 @@ const SummaryScreen = () => {
         alignItems: 'center',
         justifyContent: 'center',
         shadowColor: colors.black,
-        shadowOffset: {width: 0, height: 1},
+        shadowOffset: {width: 2, height: 2},
         shadowOpacity: 0.3,
         shadowRadius: 5,
         elevation: 4,
@@ -271,8 +271,7 @@ const SummaryScreen = () => {
         width={'70%'}
         height={verticalScale(30)}
         alignSelf={'center'}
-        shadowColor={colors.white}
-        shadowHeight={-5}
+        // shadowColor={colors.white}
       />
     </View>
   );
