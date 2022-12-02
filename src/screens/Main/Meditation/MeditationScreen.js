@@ -8,7 +8,7 @@ import { Poppins } from '../../../utils/Fonts'
 import MeditationMainImg from './Moclecules/MeditationMainImg'
 import TimerContainer from './Moclecules/TimerContainer'
 
-const MeditationScreen = () => {
+const MeditationScreen = ({navigation}) => {
   return (
     <SafeAreaView >
         <PH10>
@@ -19,6 +19,10 @@ const MeditationScreen = () => {
         fontSize={23}
         label={'Meditation'}
         marginLeft={10}
+        onPress={()=>{
+          navigation.navigate("MusicPlayerScreen")
+
+        }}
       />
             <Spacer height={10}/>
 
