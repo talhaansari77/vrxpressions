@@ -23,12 +23,10 @@ const MusicHeader = () => {
           alignSelf: 'center',
           borderRadius:scale(10),
           overflow:"hidden",
-          backgroundColor:"red"
           //   backgroundColor:"red"55555
         }}>
         <Image
           source={images.musicImage}
-          // resizeMode={'contain'}
           style={commonStyles.img}
         />
       </View>

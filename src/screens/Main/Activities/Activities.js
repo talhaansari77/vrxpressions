@@ -222,7 +222,8 @@ const Activities = ({navigation}) => {
         <ScrollView
           showsHorizontalScrollIndicator={false}
           horizontal
-          style={{height: verticalScale(200)}}>
+          style={{height: verticalScale(200)}}
+          >
           {topActivitiesList.map(item => (
             <>
               <Spacer width={20} />
