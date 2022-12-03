@@ -1,4 +1,4 @@
-import {View, Text, Image, TouchableOpacity, Platform} from 'react-native';
+import {View, Text, Image, TouchableOpacity, Platform, StyleSheet} from 'react-native';
 import React, {useState} from 'react';
 import {colors} from '../../../../utils/Colors';
 import {moderateScale, scale} from 'react-native-size-matters';
@@ -80,12 +80,13 @@ const PrimaryCard = ({
 
 export default PrimaryCard;
 
+
 const cardStyle = {
   height: '100%',
   width: '100%',
   alignSelf: 'center',
-  borderTopStartRadius: moderateScale(20),
-  borderTopEndRadius: moderateScale(20),
+  borderTopLeftRadius: moderateScale(20),
+  borderTopRightRadius: moderateScale(20),
   alignItems: 'center',
   justifyContent: 'center',
   // backgroundColor: colors.white,
@@ -106,3 +107,10 @@ const cardBtnStyle = {
   elevation: 5,
 };
 
+
+
+// const styles = StyleSheet.create({
+//   n:{
+//     borderTopLeftRadius
+//   }
+// })

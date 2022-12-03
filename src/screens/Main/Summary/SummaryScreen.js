@@ -154,7 +154,7 @@ const SummaryScreen = () => {
         width: item.width,
         borderRadius: moderateScale(15),
         marginTop: item.marginTop,
-        borderWidth: item.backgroundColor === colors.white,
+        borderWidth: item.backgroundColor === colors.white ? 1 : 0,
         // alignItems:'center',
         justifyContent: item.id === 3 ? 'center' : 'space-evenly',
       }}>
@@ -216,7 +216,8 @@ const SummaryScreen = () => {
     </View>
   );
   const FeelingsTab = ({item}) => (
-    <TouchableOpacity activeOpacity={0.8} style={{width: 60}}>
+    <TouchableOpacity activeOpacity={0.8} style={{width: 60,alignItems: 'center',
+    justifyContent: 'center',}}>
       <View
         style={{
           height: item.height,
@@ -233,7 +234,7 @@ const SummaryScreen = () => {
         />
       </View>
       <Spacer height={5} />
-      <CustomText label={item.label} alignSelf={'center'} />
+      <CustomText label={item.label} />
     </TouchableOpacity>
   );
   const Card = ({item}) => (
@@ -278,7 +279,7 @@ const SummaryScreen = () => {
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={commonStyles.IosPadding}>
-      <Spacer height={20} />
+        <Spacer height={20} />
 
         <CustomText
           fontFamily={Poppins.bold}
