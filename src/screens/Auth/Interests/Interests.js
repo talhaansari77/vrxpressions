@@ -9,7 +9,6 @@ import {colors} from '../../../utils/Colors';
 import CustomButton from '../../../components/CustomButton';
 import PrimaryCard from './Molecules/PrimaryCard';
 import Carousel from 'react-native-snap-carousel';
-
 const Interests = ({navigation}) => {
   const _renderItem = ({item, index}) => {
     return (
