@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {Dimensions, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import commonStyles from '../../../utils/CommonStyles';
 import {verticalScale} from 'react-native-size-matters';
@@ -8,8 +8,14 @@ import CustomText from '../../../components/CustomText';
 import {colors} from '../../../utils/Colors';
 import CustomButton from '../../../components/CustomButton';
 import PrimaryCard from './Molecules/PrimaryCard';
+import Carousel from 'react-native-snap-carousel';
 
 const Interests = ({navigation}) => {
+  const _renderItem = ({item, index}) => {
+    return (
+      <PrimaryCard fontSize={18} badge={1} pHeight={'80%'} pWidth={'100%'} />
+    );
+  };
   return (
     <>
       <View style={{...commonStyles.IosPadding, flex: 0}}>
@@ -22,7 +28,7 @@ const Interests = ({navigation}) => {
           fontSize={30}
           label={'LARA BLAKE'}
         />
-                <Spacer height={10} />
+        <Spacer height={10} />
 
         <View style={{flexDirection: 'row'}}>
           <CustomText
@@ -41,15 +47,23 @@ const Interests = ({navigation}) => {
             marginTop={4}
           />
         </View>
-
-       
       </View>
-      <Spacer height={50} />
+      <Spacer height={30} />
 
-      
-      <PrimaryCard fontSize={18} badge={1} pHeight={'45%'} pWidth={'85%'} />
-      <Spacer height={100} />
+      {/* <PrimaryCard fontSize={18} badge={1} pHeight={'45%'} pWidth={'85%'} /> */}
+      <Carousel
+        // ref={c => {
+        //   _carousel = c;
+        // }}
+        data={[1, 2, 3]}
+        renderItem={_renderItem}
+        sliderWidth={Dimensions.get('window').width}
+        itemWidth={Dimensions.get('window').width / 1.2}
+        // sliderHeight={}
+        sliderHeight={Dimensions.get('window').height / 3}
+      />
 
+      <Spacer height={20} />
       <CustomButton
         title={'Save'}
         fontFamily={Poppins.bold}
@@ -61,6 +75,7 @@ const Interests = ({navigation}) => {
         }}
         alignSelf={'center'}
       />
+      <Spacer height={50} />
     </>
   );
 };
