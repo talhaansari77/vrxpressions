@@ -1,7 +1,7 @@
 import {View, Text, Image, TouchableOpacity, Platform} from 'react-native';
 import React, {useState} from 'react';
 import {colors} from '../../../../utils/Colors';
-import {moderateScale} from 'react-native-size-matters';
+import {moderateScale, scale} from 'react-native-size-matters';
 import LinearGradient from 'react-native-linear-gradient';
 import {images} from '../../../../assets/images';
 import {Poppins} from '../../../../utils/Fonts';
@@ -24,6 +24,7 @@ const PrimaryCard = ({
     height: pHeight || '100%',
     width: pWidth || '100%',
     alignSelf: 'center',
+    borderRadius:scale(10),
     // shadowColor: Platform.OS=="ios"? "#212529" : colors.black,
     // shadowOffset: {width: 0, height: 1},
     // shadowOpacity: 0.2,

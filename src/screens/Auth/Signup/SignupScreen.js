@@ -1,4 +1,4 @@
-import {StyleSheet, Image, ScrollView} from 'react-native';
+import {StyleSheet, Image, ScrollView, View} from 'react-native';
 import React from 'react';
 import commonStyles from '../../../utils/CommonStyles';
 import {images} from '../../../assets/images';
@@ -16,7 +16,9 @@ import PercentageSpacer from '../../../components/PercentageSpacer';
 const SignupScreen = ({navigation}) => {
   
   return (
-    <ScrollView style={commonStyles.IosPadding}>
+    // <ScrollView >
+      <View style={{...commonStyles.IosPadding}}>
+
       {/* <PH10> */}
 
       <Image
@@ -54,12 +56,15 @@ const SignupScreen = ({navigation}) => {
         height={verticalScale(35)}
         alignSelf={'center'}
       />
-      <Spacer height={15} />
+      <Spacer height={5} />
 
       <Link txt1={'Don’t have an account?'} txt2={'Login'} onPress={()=>navigation.navigate('LoginScreen')}/>
 
       {/* </PH10> */}
-    </ScrollView>
+      </View>
+
+    // </ScrollView>
+
   );
 };
 
